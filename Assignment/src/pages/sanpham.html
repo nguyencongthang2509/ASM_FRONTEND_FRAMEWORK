@@ -1,0 +1,198 @@
+<div class="container">
+  <div class="content-san-pham">
+    <h3>Sản phẩm</h3>
+    <div class="row">
+      <div class="col-lg-2">
+        <div class="content-category">
+          <h4>Categories</h4>
+          <div class="row radio">
+            <label><input type="radio" name="category" /> Tất cả <br /> </label>
+          </div>
+          <div ng-repeat="item in listCategory" class="row radio">
+            <label
+              ><input type="radio" name="category" /> {{item.ten}} <br />
+            </label>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-10">
+        <h4>Product</h4>
+        <div class="row">
+          <div class="col-lg-6">
+            <form class="d-flex" role="search">
+              <input
+                class="form-control me-2"
+                type="search"
+                ng-model="search"
+                placeholder="Search"
+                aria-label="Search"
+              />
+            </form>
+          </div>
+          <div class="col-lg-6">
+            <button
+              data-bs-toggle="modal"
+              data-bs-target="#exampleModal"
+              class="btn btn-primary"
+            >
+              Thêm mới
+            </button>
+          </div>
+        </div>
+        <br />
+        <table class="table table-striped">
+          <tr class="table-warning">
+            <th width="100px">Hình ảnh</th>
+            <th>Mã sản phẩm</th>
+            <th>Tên sản phẩm</th>
+            <th>Số lượng</th>
+            <th>Đơn giá</th>
+            <th>Category</th>
+            <th>Action</th>
+          </tr>
+          <tr ng-repeat="item in list | filter : {maSP: search}">
+            <td>
+              <img
+                src="../../server/src/main/resources/static/image/{{item.image}}"
+                width="75px"
+                alt=""
+              />
+            </td>
+            <td>{{item.maSP}}</td>
+            <td>{{item.tenSP}}</td>
+            <td>{{item.soLuong}}</td>
+            <td>{{item.donGia}} Vnđ</td>
+            <td>{{item.category.ten}}</td>
+            <td>
+              <a href="#/detail-sanpham/{{item.id}}"
+                ><div
+                  data-toggle="tooltip"
+                  title="Xem chi tiết"
+                  class="eye-custom"
+                >
+                  <img
+                    src="../../server/src/main/resources/static/image/eye-fill.svg"
+                    alt=""
+                  /></div
+              ></a>
+              <a href=""
+                ><div
+                  data-toggle="tooltip"
+                  title="Cập nhật"
+                  class="pencil-custom"
+                >
+                  <img
+                    src="../../server/src/main/resources/static/image/pencil-square.svg"
+                    alt=""
+                  /></div
+              ></a>
+            </td>
+          </tr>
+        </table>
+        <nav class="page-custom" aria-label="Page navigation example">
+          <ul class="pagination">
+            <li class="page-item">
+              <a class="page-link" href="#" aria-label="Previous">
+                <span aria-hidden="true">&laquo;</span>
+              </a>
+            </li>
+            <li class="page-item"><a class="page-link" href="#">1</a></li>
+            <li class="page-item"><a class="page-link" href="#">2</a></li>
+            <li class="page-item"><a class="page-link" href="#">3</a></li>
+            <li class="page-item">
+              <a class="page-link" href="#" aria-label="Next">
+                <span aria-hidden="true">&raquo;</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+    <div class="row">
+      <div
+        class="modal fade"
+        id="exampleModal"
+        tabindex="-1"
+        aria-labelledby="exampleModalLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h2 class="modal-title fs-5" id="exampleModalLabel">
+                Thêm mới sản phẩm
+              </h2>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body">
+              <div class="row">
+                <div>Hình ảnh:</div>
+                <div class="upload-image">
+                  <img
+                    src=""
+                    id="showImage"
+                    width="200px"
+                    height="200px"
+                  />
+                </div>
+                <input id="valueImage" type="file" />
+              </div>
+              <div class="row">
+                <br />
+                Tên sản phẩm : <br /><input
+                  type="text"
+                  class="form-control"
+                  name=""
+                  ng-model="tenSPAdd"
+                />
+                <br />
+                Số lượng : <br /><input
+                  type="number"
+                  class="form-control"
+                  name=""
+                  id=""
+                  ng-model="soLuongAdd"
+                /><br />
+                Đơn giá : <br /><input
+                  type="number"
+                  class="form-control"
+                  name=""
+                  id=""
+                  ng-model="donGiaAdd"
+                /><br />
+                Category:
+                <select name="" class="form-control" ng-model="categoryAdd">
+                  <option value="" hidden></option>
+                  <option ng-repeat="item in listCategory" value="{{item.id}}">
+                    {{item.ten}}
+                  </option>
+                </select>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-secondary"
+                data-bs-dismiss="modal"
+              >
+                Close
+              </button>
+              <button
+                type="button"
+                ng-click="addProduct()"
+                class="btn btn-primary"
+              >
+                Thêm mới
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

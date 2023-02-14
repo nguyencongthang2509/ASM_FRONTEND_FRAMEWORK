@@ -1,0 +1,363 @@
+{
+  "order": [],
+  "orderDetail": [],
+  "user": [
+    {
+      "ma": "KH001",
+      "hoTen": "Nguyễn Công Thắng",
+      "ngaySinh": "25-09-2003",
+      "gioiTinh": false,
+      "sdt": "0971089763",
+      "email": "congthang25092003@gmail.com",
+      "matKhau": "123456",
+      "vaiTro": false,
+      "gioHang": [
+        {
+          "id": "1",
+          "soLuong": 4
+        },
+        {
+          "id": "2",
+          "soLuong": 5
+        },
+        {
+          "id": "3",
+          "soLuong": 22
+        },
+        {
+          "id": "4",
+          "soLuong": 6
+        },
+        {
+          "id": "5",
+          "soLuong": 1
+        },
+        {
+          "id": "14",
+          "soLuong": 1
+        },
+        {
+          "id": "7",
+          "soLuong": 12
+        },
+        {
+          "id": "6",
+          "soLuong": 1
+        }
+      ],
+      "id": "1"
+    },
+    {
+      "ma": "KH002",
+      "hoTen": "Nguyễn Văn A",
+      "ngaySinh": "25-09-2003",
+      "gioiTinh": false,
+      "sdt": "0971089763",
+      "email": "anv@gmail.com",
+      "matKhau": "123456",
+      "vaiTro": true,
+      "id": "2",
+      "gioHang": []
+    },
+    {
+      "ma": "KH003",
+      "hoTen": "Nguyễn Văn B",
+      "ngaySinh": "25-09-2003",
+      "gioiTinh": false,
+      "sdt": "0971089763",
+      "email": "bnv@gmail.com",
+      "matKhau": "123456",
+      "vaiTro": false,
+      "gioHang": [
+        {
+          "id": "1",
+          "soLuong": 4
+        },
+        {
+          "id": "2",
+          "soLuong": 1
+        }
+      ],
+      "id": "3"
+    },
+    {
+      "ma": "KH004",
+      "hoTen": "Nguyễn Văn C",
+      "ngaySinh": "25-09-2003",
+      "gioiTinh": false,
+      "sdt": "0971089763",
+      "email": "cnv@gmail.com",
+      "matKhau": "123456",
+      "vaiTro": false,
+      "id": "4",
+      "gioHang": []
+    },
+    {
+      "ma": "KH005",
+      "hoTen": "hNguyễn Văn D",
+      "ngaySinh": "25-09-2003",
+      "gioiTinh": false,
+      "sdt": "0971089763",
+      "email": "dnv@gmail.com",
+      "matKhau": "123456",
+      "vaiTro": false,
+      "id": "5",
+      "gioHang": []
+    },
+    {
+      "ma": "KH006",
+      "hoTen": "Nguyễn Văn E",
+      "ngaySinh": "25-09-2003",
+      "gioiTinh": false,
+      "sdt": "0971089763",
+      "email": "env@gmail.com",
+      "matKhau": "123456",
+      "vaiTro": false,
+      "id": "6",
+      "gioHang": []
+    },
+    {
+      "ma": "KH007",
+      "hoTen": "Nguyễn Văn F",
+      "ngaySinh": "25-09-2003",
+      "gioiTinh": false,
+      "sdt": "0971089763",
+      "email": "fnv@gmail.com",
+      "matKhau": "123456",
+      "vaiTro": false,
+      "id": "7",
+      "gioHang": []
+    },
+    {
+      "ma": "KH008",
+      "hoTen": "Nguyễn Văn G",
+      "ngaySinh": "25-09-2003",
+      "gioiTinh": false,
+      "sdt": "0971089763",
+      "email": "gnv@gmail.com",
+      "matKhau": "123456",
+      "vaiTro": false,
+      "id": "8",
+      "gioHang": []
+    },
+    {
+      "ma": "KH009",
+      "hoTen": "Nguyễn Văn H",
+      "ngaySinh": "25-09-2003",
+      "gioiTinh": false,
+      "sdt": "0971089763",
+      "email": "hnv@gmail.com",
+      "matKhau": "123456",
+      "vaiTro": false,
+      "id": "9",
+      "gioHang": []
+    },
+    {
+      "ma": "KH0010",
+      "hoTen": "Nguyễn Văn K",
+      "ngaySinh": "25-09-2003",
+      "gioiTinh": false,
+      "sdt": "0971089763",
+      "email": "knv@gmail.com",
+      "matKhau": "123456",
+      "vaiTro": false,
+      "id": "10",
+      "gioHang": []
+    }
+  ],
+  "products": [
+    {
+      "id": 1,
+      "maSP": "SP001",
+      "tenSP": "Aventador",
+      "donGia": 300000,
+      "soLuong": 300,
+      "image": "SP001.jpg",
+      "categoryId": "1"
+    },
+    {
+      "id": 2,
+      "maSP": "SP002",
+      "tenSP": "Kaito TA11",
+      "donGia": 300000,
+      "soLuong": 300,
+      "image": "SP002.jpg",
+      "categoryId": "3"
+    },
+    {
+      "id": 3,
+      "maSP": "SP003",
+      "tenSP": "PumaSecurity",
+      "donGia": 300000,
+      "soLuong": 300,
+      "image": "SP003.jpg",
+      "categoryId": "2"
+    },
+    {
+      "id": 4,
+      "maSP": "SP004",
+      "tenSP": "Uramy",
+      "donGia": 300000,
+      "soLuong": 300,
+      "image": "SP004.jpg",
+      "categoryId": "2"
+    },
+    {
+      "id": 5,
+      "maSP": "SP005",
+      "tenSP": "Predoctor A12",
+      "donGia": 300000,
+      "soLuong": 300,
+      "image": "SP005.jpg",
+      "categoryId": "1"
+    },
+    {
+      "id": 6,
+      "maSP": "SP006",
+      "tenSP": "Kaly Avenkor",
+      "donGia": 300000,
+      "soLuong": 300,
+      "image": "SP006.jpg",
+      "categoryId": "3"
+    },
+    {
+      "id": 7,
+      "maSP": "SP007",
+      "tenSP": "Predoctor C200",
+      "donGia": 300000,
+      "soLuong": 300,
+      "image": "SP007.jpg",
+      "categoryId": "4"
+    },
+    {
+      "id": 8,
+      "maSP": "SP008",
+      "tenSP": "Yamy Avenue",
+      "donGia": 300000,
+      "soLuong": 300,
+      "image": "SP008.jpg",
+      "categoryId": "3"
+    },
+    {
+      "id": 9,
+      "maSP": "SP009",
+      "tenSP": "Kaito TA11 TF KID",
+      "donGia": 300000,
+      "soLuong": 300,
+      "image": "SP009.jpg",
+      "categoryId": "3"
+    },
+    {
+      "id": 10,
+      "maSP": "SP010",
+      "tenSP": "Kaito TA11 TF KID",
+      "donGia": 300000,
+      "soLuong": 300,
+      "image": "SP010.jpg",
+      "categoryId": "2"
+    },
+    {
+      "id": 11,
+      "maSP": "SP011",
+      "tenSP": "Kaito TA11 TF KID",
+      "donGia": 300000,
+      "soLuong": 300,
+      "image": "SP011.jpg",
+      "categoryId": "4"
+    },
+    {
+      "id": 12,
+      "maSP": "SP012",
+      "tenSP": "Kaito TA11 TF KID",
+      "donGia": 300000,
+      "soLuong": 300,
+      "image": "SP012.jpg",
+      "categoryId": "2"
+    },
+    {
+      "id": 13,
+      "maSP": "SP013",
+      "tenSP": "Kaito TA11 TF KID",
+      "donGia": 300000,
+      "soLuong": 300,
+      "image": "SP013.jpg",
+      "categoryId": "1"
+    },
+    {
+      "id": 14,
+      "maSP": "SP014",
+      "tenSP": "Kaito TA11 TF KID",
+      "donGia": 300000,
+      "soLuong": 300,
+      "image": "SP014.jpg",
+      "categoryId": "3"
+    },
+    {
+      "id": 15,
+      "maSP": "SP015",
+      "tenSP": "Kaito TA11 TF KID",
+      "donGia": 300000,
+      "soLuong": 300,
+      "image": "SP015.jpg",
+      "categoryId": "4"
+    },
+    {
+      "id": 16,
+      "maSP": "SP016",
+      "tenSP": "Kaito TA11 TF KID",
+      "donGia": 300000,
+      "soLuong": 300,
+      "image": "SP016.jpg",
+      "categoryId": "1"
+    },
+    {
+      "id": 17,
+      "maSP": "SP161",
+      "tenSP": "Air Force 1",
+      "donGia": 200000,
+      "soLuong": 120,
+      "image": "278647747_558235158918064_827646886729820002_n.jpg",
+      "categoryId": "1"
+    },
+    {
+      "id": 18,
+      "maSP": "SP171",
+      "tenSP": "Best Seller",
+      "donGia": 120000,
+      "soLuong": 12,
+      "image": "279907381_752793049220164_4892220650263376170_n.jpg",
+      "categoryId": "3"
+    },
+    {
+      "id": 19,
+      "maSP": "SP181",
+      "tenSP": "Sản phẩm 12",
+      "donGia": 300000,
+      "soLuong": 122,
+      "image": "309113439_1151653142439548_6933437527924716400_n.jpg",
+      "categoryId": "2"
+    }
+  ],
+  "categories": [
+    {
+      "id": "1",
+      "ma": "TL001",
+      "ten": "Nike AFF"
+    },
+    {
+      "id": "2",
+      "ma": "TL002",
+      "ten": "Adidas B12"
+    },
+    {
+      "id": "3",
+      "ma": "TL003",
+      "ten": "Vans A12"
+    },
+    {
+      "id": "4",
+      "ma": "TL004",
+      "ten": "Puma"
+    }
+  ]
+}

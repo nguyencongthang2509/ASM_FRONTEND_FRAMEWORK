@@ -1,0 +1,53 @@
+<div class="container">
+  <div class="title-content">
+    <h2>Giỏ hàng của bạn</h2>
+  </div>
+  <div class="list-giohang">
+    <table class="table table-bordered">
+      <thead>
+        <tr style="text-align: center; background-color: rgb(236, 142, 65)">
+          <th scope="col">
+            <input class="form-check-input" type="checkbox" />
+          </th>
+          <th width="20%">Hình ảnh</th>
+          <th scope="col">Tên sản phẩm</th>
+          <th width="100px" scope="col">Số lượng</th>
+          <th scope="col">Đơn giá</th>
+          <th scope="col">Thành tiền</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr style="text-align: center" ng-repeat="item in listGioHang">
+          <th scope="row">
+            <input class="form-check-input" type="checkbox" />
+          </th>
+          <td>
+            <img
+              src="../../server/src/main/resources/static/image/{{findProductById(item.id).image}}"
+              width="40%"
+              alt=""
+            />
+          </td>
+          <td>{{findProductById(item.id).tenSP}}</td>
+
+          <td>
+            <input
+              class="form-control"
+              ng-model="soLuongChange"
+              type="number"
+              ng-change="changeInput(item.id, $index)"
+              id="inputValue"
+              value="{{item.soLuong}}"
+            />
+          </td>
+          <td>{{findProductById(item.id).donGia}} Vnđ</td>
+          <td>{{findProductById(item.id).donGia * item.soLuong}} Vnđ</td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="thanh-toan">
+      <b style="color: red">Tổng tiền: 300,000 Vnđ</b>
+      <button class="btn btn-primary">Mua hàng</button>
+    </div>
+  </div>
+</div>
