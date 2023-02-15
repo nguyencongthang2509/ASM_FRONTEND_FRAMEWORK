@@ -14,7 +14,7 @@
       "gioHang": [
         {
           "id": 1,
-          "soLuong": 2
+          "soLuong": 3
         },
         {
           "id": 2,
@@ -352,10 +352,10 @@
     },
     {
       "maSP": "SP201",
-      "tenSP": "sdfdsf",
+      "tenSP": "Thắng",
       "donGia": 210000,
-      "soLuong": 120,
-      "image": "309402596_500820358212765_3091020054328393910_n.jpg",
+      "soLuong": 12,
+      "image": "245678195_286436283484378_7517250150558870398.jpg",
       "categoryId": 2,
       "id": 21
     },
@@ -367,6 +367,24 @@
       "soLuong": 200,
       "image": "background.webp",
       "categoryId": 3
+    },
+    {
+      "id": 23,
+      "maSP": "SP221",
+      "tenSP": "1212",
+      "donGia": 1212121,
+      "soLuong": 121,
+      "image": "325965728_1138678596787291_7537674635508760342_n.jpg",
+      "categoryId": 1
+    },
+    {
+      "id": 24,
+      "maSP": "SP231",
+      "tenSP": "abc",
+      "donGia": 211111,
+      "soLuong": 12,
+      "image": "328638924_6617591348267975_3700650755552774607_n.jpg",
+      "categoryId": 1
     }
   ],
   "categories": [

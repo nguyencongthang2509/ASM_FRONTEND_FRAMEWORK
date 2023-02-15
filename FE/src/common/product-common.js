@@ -11,9 +11,13 @@ app.factory("ProductUpdate", function ($resource) {
 });
 
 app.factory("ProductAdd", function ($resource) {
-  return $resource(productsAPI, {
-    add: {
-      method: "POST",
-    },
-  });
+  return $resource(
+    productsAPI + "/:id",
+    { id: "@_id" },
+    {
+      create: {
+        method: "POST",
+      },
+    }
+  );
 });

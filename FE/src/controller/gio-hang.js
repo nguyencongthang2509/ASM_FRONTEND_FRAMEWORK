@@ -52,14 +52,16 @@ window.GioHangController = function (
         gioHang: gioHangAfterUpdate,
       }
     ).$promise.then(
-      function (response) {},
+      function (response) {
+        alert("Cập nhật thành công")
+      },
       function (error) {}
     );
   };
 
   $scope.deleteGioHang = function(id){
-    let confirm = confirm("Bạn có chắc chắn muốn xóa sản phẩm này khỏi giỏ hàng hay không?"); 
-    if(confirm){
+    let check = confirm("Bạn có chắc chắn muốn xóa sản phẩm này khỏi giỏ hàng hay không?"); 
+    if(check){
       
     }
   }

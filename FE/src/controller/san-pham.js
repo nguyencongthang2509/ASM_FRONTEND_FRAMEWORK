@@ -60,28 +60,42 @@ window.SanPhamController = function (
         function (error) {}
       );
 
-    $http
-      .post(productsAPI, {
-        id: Number($scope.list.length) + 1,
-        maSP: "SP" + Number($scope.list.length) + 1,
-        tenSP: $scope.tenSPAdd,
-        donGia: $scope.donGiaAdd,
-        soLuong: $scope.soLuongAdd,
-        image: file.name,
-        categoryId: Number($scope.categoryAdd),
-      })
-      .then(
-        function (response) {
-          console.log(response);
-          if (response.status === 201) {
-            alert("Thêm thành công");
-            $location.path("/san-pham");
-          }
-        },
-        function (errors) {
-          console.log(errors);
-        }
-      );
+    ProductAdd.create({
+      id: Number($scope.list.length) + 1,
+      maSP: "SP" + Number($scope.list.length) + 1,
+      tenSP: $scope.tenSPAdd,
+      donGia: $scope.donGiaAdd,
+      soLuong: $scope.soLuongAdd,
+      image: file.name,
+      categoryId: Number($scope.categoryAdd),
+    }).$promise.then(
+      function (response) {
+        alert("Thêm thành công");
+      },
+      function (error) {}
+    );
+    // $http
+    //   .post(productsAPI, {
+    //     id: Number($scope.list.length) + 1,
+    //     maSP: "SP" + Number($scope.list.length) + 1,
+    //     tenSP: $scope.tenSPAdd,
+    //     donGia: $scope.donGiaAdd,
+    //     soLuong: $scope.soLuongAdd,
+    //     image: file.name,
+    //     categoryId: Number($scope.categoryAdd),
+    //   })
+    //   .then(
+    //     function (response) {
+    //       console.log(response);
+    //       if (response.status === 201) {
+    //         alert("Thêm thành công");
+    //         $location.path("/san-pham");
+    //       }
+    //     },
+    //     function (errors) {
+    //       console.log(errors);
+    //     }
+    //   );
   };
 
   let idSPUpdate = 0;
@@ -132,12 +146,13 @@ window.SanPhamController = function (
           },
           function (error) {}
         );
-    }else{
+    } else {
       fileNameUpdate = $scope.findProductById(idSPUpdate).image;
     }
 
-    $http
-      .put(productsAPI + "/" + idSPUpdate, {
+    ProductUpdate.update(
+      { id: idSPUpdate },
+      {
         maSP: $scope.findProductById(idSPUpdate).maSP,
         tenSP: $scope.tenSPUpdate,
         donGia: $scope.donGiaUpdate,
@@ -146,18 +161,16 @@ window.SanPhamController = function (
         categoryId: Number(
           document.querySelector("#categoryUpdateSelected").value
         ),
-      })
-      .then(
-        function (response) {
-          if (response.status === 201) {
-            alert("Cập nhật thành công");
-            $location.path("/san-pham");
-          }
-        },
-        function (errors) {
-          console.log(errors);
-        }
-      );
+      }
+    ).$promise.then(
+      function (response) {
+        alert("Cập nhật thành công");
+        $location.path("/san-pham");
+      },
+      function (errors) {
+        console.log(errors);
+      }
+    );
   };
 
   $scope.checkboxFather = true;

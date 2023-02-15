@@ -1,6 +1,6 @@
-app.factory("UserUpdate", function ($resource) {
+app.factory("CategoryUpdate", function ($resource) {
   return $resource(
-    userAPI + "/:id",
+    categoryAPI + "/:id",
     { id: "@_id" },
     {
       update: {
@@ -10,15 +10,14 @@ app.factory("UserUpdate", function ($resource) {
   );
 });
 
-app.factory("UserAdd", function ($resource) {
+app.factory("CategoryAdd", function ($resource) {
   return $resource(
-    userAPI + "/:id",
+    categoryAPI + "/:id",
     { id: "@_id" },
     {
-      update: {
+      create: {
         method: "POST",
       },
     }
   );
 });
-

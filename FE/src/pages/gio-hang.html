@@ -45,10 +45,10 @@
           <td>{{findProductById(item.id).donGia}} Vnđ</td>
           <td>{{findProductById(item.id).donGia * item.soLuong}} Vnđ</td>
           <td>
-            <a href="" ng-click="deleteGioHang(item.id)"
+            <a href="" type="button" ng-click="deleteGioHang(item.id)"
               ><div
                 data-toggle="tooltip"
-                title="Cập nhật"
+                title="Xóa khỏi giỏ hàng"
                 class="pencil-custom"
               >
                 <img
