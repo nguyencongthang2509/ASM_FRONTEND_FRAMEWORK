@@ -14,7 +14,7 @@
       "gioHang": [
         {
           "id": 1,
-          "soLuong": 3
+          "soLuong": 4
         },
         {
           "id": 2,
@@ -46,6 +46,10 @@
         },
         {
           "id": 17,
+          "soLuong": 1
+        },
+        {
+          "id": 24,
           "soLuong": 1
         }
       ],
@@ -378,13 +382,13 @@
       "categoryId": 1
     },
     {
-      "id": 24,
       "maSP": "SP231",
       "tenSP": "abc",
       "donGia": 211111,
       "soLuong": 12,
-      "image": "328638924_6617591348267975_3700650755552774607_n.jpg",
-      "categoryId": 1
+      "image": "245678195_286436283484378_7517250150558870398_n (1).jpg",
+      "categoryId": 1,
+      "id": 24
     }
   ],
   "categories": [

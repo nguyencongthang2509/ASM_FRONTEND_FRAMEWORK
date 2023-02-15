@@ -4,7 +4,8 @@ window.TrangChuController = function (
   $http,
   $rootScope,
   ProductService,
-  UserService
+  UserService,
+  UserUpdate
 ) {
   $scope.username = $localStorage.username;
 
@@ -64,8 +65,9 @@ window.TrangChuController = function (
       gioHangAfterUpdate.push(gioHangObject);
     }
 
-    $http
-      .put(`${userAPI}/${idUser}`, {
+    UserUpdate.update(
+      { id: idUser },
+      {
         ma: $scope.userCurrent.ma,
         hoTen: $scope.userCurrent.hoTen,
         ngaySinh: $scope.userCurrent.ngaySinh,
@@ -75,16 +77,12 @@ window.TrangChuController = function (
         matKhau: $scope.userCurrent.matKhau,
         vaiTro: $scope.userCurrent.vaiTro,
         gioHang: gioHangAfterUpdate,
-      })
-      .then(
-        function (response) {
-          if (response.status === 200) {
-            alert("Đã thêm sản phẩm vào giỏ hàng");
-          }
-        },
-        function (errors) {
-          console.log(errors);
-        }
-      );
+      }
+    ).$promise.then(
+      function (response) {
+        alert("Đã thêm sản phẩm vào giỏ hàng");
+      },
+      function (error) {}
+    );
   };
 };

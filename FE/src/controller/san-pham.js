@@ -74,28 +74,6 @@ window.SanPhamController = function (
       },
       function (error) {}
     );
-    // $http
-    //   .post(productsAPI, {
-    //     id: Number($scope.list.length) + 1,
-    //     maSP: "SP" + Number($scope.list.length) + 1,
-    //     tenSP: $scope.tenSPAdd,
-    //     donGia: $scope.donGiaAdd,
-    //     soLuong: $scope.soLuongAdd,
-    //     image: file.name,
-    //     categoryId: Number($scope.categoryAdd),
-    //   })
-    //   .then(
-    //     function (response) {
-    //       console.log(response);
-    //       if (response.status === 201) {
-    //         alert("Thêm thành công");
-    //         $location.path("/san-pham");
-    //       }
-    //     },
-    //     function (errors) {
-    //       console.log(errors);
-    //     }
-    //   );
   };
 
   let idSPUpdate = 0;
@@ -140,10 +118,7 @@ window.SanPhamController = function (
           headers: { "Content-Type": undefined },
         })
         .then(
-          function (response) {
-            if (response.status === 200) {
-            }
-          },
+          function (response) {},
           function (error) {}
         );
     } else {
