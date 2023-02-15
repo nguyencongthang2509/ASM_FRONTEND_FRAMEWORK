@@ -1,17 +1,18 @@
 app.controller(
   "myCtrl",
-  function ($scope, $http, $rootScope, $localStorage, UserService) {
-    $rootScope.username = $localStorage.username;
-    $rootScope.hoTen = $localStorage.hoTen;
-    $rootScope.vaiTro = $localStorage.vaiTro;
+  function ($scope, $http, $localStorage) {
+    $scope.username = $localStorage.username;
+    $scope.hoTen = $localStorage.hoTen;
+    $scope.vaiTro = $localStorage.vaiTro;
     $localStorage.checkAuthors = true;
+    
     if ($localStorage.vaiTro) {
-      $rootScope.showClient = false;
-      $rootScope.showAdmin = true;
+      $scope.showClient = false;
+      $scope.showAdmin = true;
       $localStorage.checkAuthors = true;
     } else {
-      $rootScope.showClient = true;
-      $rootScope.showAdmin = false;
+      $scope.showClient = true;
+      $scope.showAdmin = false;
       $localStorage.checkAuthors = false;
     }
 
@@ -35,12 +36,12 @@ app.controller(
       function (response) {
         if (response.statusText === "OK") {
           listUsers = response.data;
-          $rootScope.listUsers = response.data;
+          $scope.listUsers = response.data;
         }
         for (var item of listUsers) {
           if (item.email == $localStorage.username) {
             $scope.soLuongSPGioHang = item.gioHang.length;
-            $rootScope.listGioHang = item.gioHang;
+            $scope.listGioHang = item.gioHang;
           }
         }
       },

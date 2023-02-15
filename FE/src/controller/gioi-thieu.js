@@ -1,4 +1,4 @@
-window.GioiThieuController = ($rootScope, $localStorage) => {
+window.GioiThieuController = function ($rootScope, $localStorage) {
   if ($localStorage.vaiTro) {
     $rootScope.checkAuthors = false;
   } else {

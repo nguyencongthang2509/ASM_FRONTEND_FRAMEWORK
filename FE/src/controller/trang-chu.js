@@ -87,29 +87,4 @@ window.TrangChuController = function (
         }
       );
   };
-
-  document.querySelector("#inputFile").addEventListener("input", function () {
-    var formData = new FormData();
-
-    var file = document.querySelector("#inputFile").files[0];
-
-
-    formData.append("file", file);
-
-    document.querySelector("#imgValue").src = URL.createObjectURL(file);
-
-    //   $http
-    //     .post("http://localhost:8080/dowload", formData, {
-    //       transformRequest: angular.identity,
-    //       headers: { "Content-Type": undefined },
-    //     })
-    //     .then(
-    //       function (response) {
-    //         if (response.status === 200) {
-
-    //         }
-    //       },
-    //       function (error) {}
-    //     );
-  });
 };

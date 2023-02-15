@@ -1,9 +1,9 @@
 window.DetailSanphamController = function (
   $scope,
+  $rootScope,
   $routeParams,
   ProductService,
   $localStorage,
-  $rootScope
 ) {
 
   if ($localStorage.vaiTro) {

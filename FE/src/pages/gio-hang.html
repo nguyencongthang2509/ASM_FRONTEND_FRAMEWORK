@@ -14,6 +14,7 @@
           <th width="100px" scope="col">Số lượng</th>
           <th scope="col">Đơn giá</th>
           <th scope="col">Thành tiền</th>
+          <th scope="col">Hành động</th>
         </tr>
       </thead>
       <tbody>
@@ -24,7 +25,8 @@
           <td>
             <img
               src="../../server/src/main/resources/static/image/{{findProductById(item.id).image}}"
-              width="40%"
+              width="100px"
+              height="100px"
               alt=""
             />
           </td>
@@ -42,6 +44,19 @@
           </td>
           <td>{{findProductById(item.id).donGia}} Vnđ</td>
           <td>{{findProductById(item.id).donGia * item.soLuong}} Vnđ</td>
+          <td>
+            <a href="" ng-click="deleteGioHang(item.id)"
+              ><div
+                data-toggle="tooltip"
+                title="Cập nhật"
+                class="pencil-custom"
+              >
+                <img
+                  src="../../server/src/main/resources/static/image/trash3-fill.svg"
+                  alt=""
+                /></div
+            ></a>
+          </td>
         </tr>
       </tbody>
     </table>

@@ -6,7 +6,6 @@ window.GioHangController = function (
   UserService,
   UserUpdate
 ) {
-
   if ($localStorage.vaiTro) {
     $rootScope.checkAuthors = false;
   } else {
@@ -57,4 +56,11 @@ window.GioHangController = function (
       function (error) {}
     );
   };
+
+  $scope.deleteGioHang = function(id){
+    let confirm = confirm("Bạn có chắc chắn muốn xóa sản phẩm này khỏi giỏ hàng hay không?"); 
+    if(confirm){
+      
+    }
+  }
 };

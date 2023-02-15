@@ -12,13 +12,13 @@
     <div class="col-lg-5 custom"></div>
     <div class="col-lg-3 custom">
       <div ng-if="showLogin" class="header-login">
-        <a href="../src/dangky.html">Sing up</a> |
-        <a href="../src/dangnhap.html">Login</a>
+        <a href="../src/dang-ky.html">Sing up</a> |
+        <a href="../src/dang-nhap.html">Login</a>
       </div>
       <div ng-if="showLogout" class="header-login">
         <img class="icon" src="../../server/src/main/resources/static/image/person-fill.svg" alt="" />
         {{hoTen}} |
-        <a ng-click="logOut()" href="../src/dangnhap.html">Logout</a>
+        <a ng-click="logOut()" href="../src/dang-nhap.html">Logout</a>
       </div>
     </div>
   </div>
@@ -41,7 +41,7 @@
             <a class="nav-link" href="#ve-chung-toi">Về chúng tôi</a>
           </li>
           <li ng-if="showClient" class="nav-item">
-            <a class="nav-link" href="#ve-chung-toi">Liên hệ</a>
+            <a class="nav-link" href="#lien-he">Liên hệ</a>
           </li>
           <li ng-if="showAdmin" class="nav-item">
             <a class="nav-link" href="#san-pham">Sản phẩm</a>
@@ -54,7 +54,7 @@
     </div>
     <div class="col-lg-3">
       <div class="icon-custom">
-        <a ng-if="showLogout && showClient" href="#don-hang-da-mua" data-toggle="tooltip" title="Đơn hàng đã mua"
+        <a ng-if="showLogout && showClient" href="#don-hang-cua-ban" data-toggle="tooltip" title="Đơn hàng đã mua"
           ><img class="icon" src="../../server/src/main/resources/static/image/journal-album.svg" alt=""
         /></a>
         <a href="#gio-hang" ng-if="showClient" class="cart-fill">

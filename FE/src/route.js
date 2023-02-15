@@ -5,37 +5,41 @@ app.config(function ($routeProvider, $locationProvider) {
   $locationProvider.hashPrefix("");
   $routeProvider
     .when("/trang-chu", {
-      templateUrl: "../src/pages/trangchu.html",
+      templateUrl: "../src/pages/trang-chu.html",
       controller: TrangChuController,
     })
     .when("/gioi-thieu", {
-      templateUrl: "../src/pages/gioithieu.html",
+      templateUrl: "../src/pages/gioi-thieu.html",
       controller: GioiThieuController,
     })
     .when("/ve-chung-toi", {
-      templateUrl: "../src/pages/vechungtoi.html",
-      controller: VeChungToiController
+      templateUrl: "../src/pages/ve-chung-toi.html",
+      controller: VeChungToiController,
+    })
+    .when("/lien-he", {
+      templateUrl: "../src/pages/ve-chung-toi.html",
+      controller: VeChungToiController,
+    })
+    .when("/don-hang-cua-ban", {
+      templateUrl: "../src/pages/don-hang-cua-ban.html",
+      controller: DonHangCuaBanController,
     })
     .when("/san-pham", {
-      templateUrl: "../src/pages/sanpham.html",
+      templateUrl: "../src/pages/san-pham.html",
       controller: SanPhamController,
     })
     .when("/don-hang", {
-      templateUrl: "../src/pages/donhang.html",
+      templateUrl: "../src/pages/don-hang.html",
     })
     .when("/detail-sanpham/:id", {
       templateUrl: "../src/pages/detail-sanpham.html",
       controller: DetailSanphamController,
     })
     .when("/gio-hang", {
-      templateUrl: "../src/pages/giohang.html",
+      templateUrl: "../src/pages/gio-hang.html",
       controller: GioHangController,
-    })
-    .when("/don-hang-da-mua", {
-      templateUrl: "../src/pages/donhangdamua.html",
     })
     .otherwise({
       redirectTo: "/trang-chu",
     });
 });
-

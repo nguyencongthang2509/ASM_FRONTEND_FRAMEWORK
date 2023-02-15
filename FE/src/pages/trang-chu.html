@@ -1,6 +1,3 @@
-<input type="file" id="inputFile"/>
-<!-- <button type="button" ng-click="dowloadImage($event)">Dowload</button> -->
-<img id="imgValue" width="10%" alt="Image"/>
 <div class="container d-flex justify-content-center">
   <div id="carouselExampleIndicators" class="carousel slide">
     <div class="carousel-indicators">
@@ -93,6 +90,7 @@
         <img
           src="../../server/src/main/resources/static/image/{{item.image}}"
           class="card-img-top"
+          width="200px" height="300px"
           alt="..."
         />
         <div class="card-body">
@@ -177,7 +175,8 @@
               <div class="col-6">
                 <img
                   src="../../server/src/main/resources/static/image/{{findProductById(idSP).image}}"
-                  width="50%"
+                  width="100px" 
+                  height="100px"
                   alt=""
                 />
               </div>

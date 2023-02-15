@@ -10,7 +10,7 @@
   <body ng-controller="myCtrl">
     <header ng-include="'./layout/header.html'"></header>
     <main ng:show="checkAuthors" ng-view></main>
-    <main ng:hide="checkAuthors" >
+    <main ng:hide="checkAuthors">
       <section ng-include="'./pages/not-found.html'"></section>
     </main>
     <footer ng-include="'./layout/footer.html'"></footer>
@@ -24,17 +24,20 @@
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.9/angular-resource.min.js"></script>
     <script src="./config/api.js"></script>
     <script src="./app.js"></script>
+    <script src="./service/category-service.js"></script>
     <script src="./service/product-service.js"></script>
     <script src="./service/category-service.js"></script>
     <script src="./service/user-service.js"></script>
-    <script src="./service/filter.js"></script>
-    <script src="./common/user.js"></script>
-    <script src="./controller/trangchu.js"></script>
+    <script src="./common/user-common.js"></script>
+    <script src="./common/product-common.js"></script>
+    <script src="./controller/trang-chu.js"></script>
     <script src="./controller/detail-sanpham.js"></script>
-    <script src="./controller/giohang.js"></script>
-    <script src="./controller/vechungtoi.js"></script>
-    <script src="./controller/sanpham.js"></script>
-    <script src="./controller/gioithieu.js"></script>
+    <script src="./controller/gioi-thieu.js"></script>
+    <script src="./controller/gio-hang.js"></script>
+    <script src="./controller/ve-chung-toi.js"></script>
+    <script src="./controller/san-pham.js"></script>
+    <script src="./controller/don-hang-cua-ban.js"></script>
+    <script src="./controller/don-hang.js"></script>
     <script src="./controller/main.js"></script>
     <script src="./route.js"></script>
   </body>

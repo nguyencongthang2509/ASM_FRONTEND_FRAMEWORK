@@ -6,11 +6,11 @@
         <div class="content-category">
           <h4>Categories</h4>
           <div class="row radio">
-            <label><input type="radio" name="category" /> Tất cả <br /> </label>
+            <label><input type="checkbox" ng-model="checkboxFather" ng-change="selectAll()" class="form-check-input" name="category" /> Tất cả <br /> </label>
           </div>
           <div ng-repeat="item in listCategory" class="row radio">
             <label
-              ><input type="radio" name="category" /> {{item.ten}} <br />
+              ><input type="checkbox" value="{{item.id}}" ng-change="actionChecked()" ng-model="checkboxChecked"  class="form-check-input" name="category" /> {{item.ten}} <br />
             </label>
           </div>
         </div>
@@ -50,11 +50,12 @@
             <th>Category</th>
             <th>Action</th>
           </tr>
-          <tr ng-repeat="item in list | filter : {maSP: search}">
+          <tr ng-repeat="item in list | filter : {tenSP: search}">
             <td>
               <img
                 src="../../server/src/main/resources/static/image/{{item.image}}"
                 width="75px"
+                height="75px"
                 alt=""
               />
             </td>
@@ -75,7 +76,11 @@
                     alt=""
                   /></div
               ></a>
-              <a href=""
+              <a
+                href=""
+                data-bs-toggle="modal"
+                data-bs-target="#updateModal"
+                ng-click="updateAction(item.id)"
                 ><div
                   data-toggle="tooltip"
                   title="Cập nhật"
@@ -130,17 +135,14 @@
               ></button>
             </div>
             <div class="modal-body">
-              <div class="row">
-                <div>Hình ảnh:</div>
-                <div class="upload-image">
-                  <img
-                    src=""
-                    id="showImage"
-                    width="200px"
-                    height="200px"
-                  />
+              <div class="custom-modal-body">
+                <div class="row">
+                  <div>Hình ảnh:</div>
+                  <div class="upload-image">
+                    <img src="" id="showImage" width="200px" height="200px" />
+                  </div>
+                  <input id="valueImage" type="file" />
                 </div>
-                <input id="valueImage" type="file" />
               </div>
               <div class="row">
                 <br />
@@ -188,6 +190,102 @@
                 class="btn btn-primary"
               >
                 Thêm mới
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div
+        class="modal fade"
+        id="updateModal"
+        tabindex="-1"
+        aria-labelledby="exampleModalLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h2 class="modal-title fs-5" id="exampleModalLabel">
+                Cập nhật sản phẩm
+              </h2>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body">
+              <div class="custom-modal-body">
+                <div class="row">
+                  <div>Hình ảnh:</div>
+                  <div class="upload-image">
+                    <img
+                      src=""
+                      id="showImageUpdate"
+                      width="200px"
+                      height="200px"
+                    />
+                  </div>
+                  <input
+                    id="valueImageUpdate"
+                    type="file"
+                  />
+                </div>
+              </div>
+              <div class="row">
+                <br />
+                Tên sản phẩm : <br /><input
+                  type="text"
+                  class="form-control"
+                  ng-model="tenSPUpdate"
+                />
+                <br />
+                Số lượng : <br /><input
+                  type="number"
+                  class="form-control"
+                  name=""
+                  id=""
+                  ng-model="soLuongUpdate"
+                /><br />
+                Đơn giá : <br /><input
+                  type="number"
+                  class="form-control"
+                  name=""
+                  id=""
+                  ng-model="donGiaUpdate"
+                /><br />
+                Category:
+                <select
+                  name=""
+                  class="form-control"
+                  ng-model="categoryUpdate"
+                  id="categoryUpdateSelected"
+                >
+                  <option value="" hidden></option>
+                  <option ng-repeat="item in listCategory" value="{{item.id}}">
+                    {{item.ten}}
+                  </option>
+                </select>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-secondary"
+                data-bs-dismiss="modal"
+              >
+                Close
+              </button>
+              <button
+                type="button"
+                ng-click="updateProduct()"
+                class="btn btn-primary"
+              >
+                Cập nhật
               </button>
             </div>
           </div>
