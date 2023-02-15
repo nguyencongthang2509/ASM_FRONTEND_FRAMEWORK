@@ -105,12 +105,43 @@ window.GioHangController = function (
 
   $scope.actionChecked = function () {
     let sum = 0;
+    let count = 0;
     let listCheckbox = document.querySelectorAll('[ng-model="checkboxCon"]');
+    let checkboxCha = document.querySelector('[ng-model="checkboxCha"]');
     listCheckbox.forEach((item) => {
       if (item.checked) {
-        sum += Number(($scope.findProductById(item.value).donGia) * $scope.findGioHangById(item.value).soLuong);
+        sum += Number(
+          $scope.findProductById(item.value).donGia *
+            $scope.findGioHangById(item.value).soLuong
+        );
+        ++count;
       }
     });
+    if(count == listCheckbox.length) {
+      checkboxCha.checked = true;
+    }else{
+      checkboxCha.checked = false;
+    }
+    $scope.tongTien = sum;
+  };
+
+  $scope.actionCheckedCha = function () {
+    let sum = 0;
+    let listCheckBoxCon = document.querySelectorAll('[ng-model="checkboxCon"]');
+    let checkboxCha = document.querySelector('[ng-model="checkboxCha"]');
+    if (checkboxCha.checked) {
+      listCheckBoxCon.forEach((item) => {
+        item.checked = true;
+        sum += Number(
+          $scope.findProductById(item.value).donGia *
+            $scope.findGioHangById(item.value).soLuong
+        );
+      });
+    } else {
+      listCheckBoxCon.forEach((item) => {
+        item.checked = false;
+      });
+    }
     $scope.tongTien = sum;
   };
 };
