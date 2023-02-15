@@ -39,6 +39,9 @@ app.config(function ($routeProvider, $locationProvider) {
       templateUrl: "../src/pages/gio-hang.html",
       controller: GioHangController,
     })
+    .when("/mua-hang", {
+      templateUrl: "../src/pages/mua-hang.html",
+    })
     .otherwise({
       redirectTo: "/trang-chu",
     });

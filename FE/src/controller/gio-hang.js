@@ -53,16 +53,45 @@ window.GioHangController = function (
       }
     ).$promise.then(
       function (response) {
-        alert("Cập nhật thành công")
+        alert("Cập nhật thành công");
       },
       function (error) {}
     );
   };
 
-  $scope.deleteGioHang = function(id){
-    let check = confirm("Bạn có chắc chắn muốn xóa sản phẩm này khỏi giỏ hàng hay không?"); 
-    if(check){
-      
+  $scope.deleteGioHang = function (id) {
+    let check = confirm(
+      "Bạn có chắc chắn muốn xóa sản phẩm này khỏi giỏ hàng hay không?"
+    );
+    if (check) {
+      var gioHangAfterUpdate = [];
+
+      for (var item of $scope.userCurrent.gioHang) {
+        if (item.id == id) {
+          continue;
+        }
+        gioHangAfterUpdate.push(item);
+      }
+
+      UserUpdate.update(
+        { id: $localStorage.id },
+        {
+          ma: $scope.userCurrent.ma,
+          hoTen: $scope.userCurrent.hoTen,
+          ngaySinh: $scope.userCurrent.ngaySinh,
+          gioiTinh: $scope.userCurrent.gioiTinh,
+          sdt: $scope.userCurrent.sdt,
+          email: $scope.userCurrent.email,
+          matKhau: $scope.userCurrent.matKhau,
+          vaiTro: $scope.userCurrent.vaiTro,
+          gioHang: gioHangAfterUpdate,
+        }
+      ).$promise.then(
+        function (response) {
+          alert("Xóa thành công khỏi giỏ hàng");
+        },
+        function (error) {}
+      );
     }
-  }
+  };
 };

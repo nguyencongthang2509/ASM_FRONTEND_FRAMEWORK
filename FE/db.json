@@ -14,43 +14,11 @@
       "gioHang": [
         {
           "id": 1,
-          "soLuong": 4
+          "soLuong": 2
         },
         {
           "id": 2,
-          "soLuong": 1
-        },
-        {
-          "id": 3,
-          "soLuong": 7
-        },
-        {
-          "id": 4,
-          "soLuong": 6
-        },
-        {
-          "id": 5,
-          "soLuong": 1
-        },
-        {
-          "id": 14,
-          "soLuong": 1
-        },
-        {
-          "id": 7,
-          "soLuong": 3
-        },
-        {
-          "id": 6,
-          "soLuong": 1
-        },
-        {
-          "id": 17,
-          "soLuong": 1
-        },
-        {
-          "id": 24,
-          "soLuong": 1
+          "soLuong": 2
         }
       ],
       "id": 1
