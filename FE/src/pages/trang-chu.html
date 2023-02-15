@@ -96,7 +96,7 @@
         <div class="card-body">
           <h5 class="card-title">{{item.tenSP}}</h5>
           <p class="card-text">
-            <b><span style="color: red">{{item.donGia}} Vnđ</span></b>
+            <b><span style="color: red">{{item.donGia.toLocaleString('vi-VN')}} Vnđ</span></b>
           </p>
         </div>
         <div class="content-custom-order">
@@ -164,7 +164,7 @@
                 >
                 <br />
                 <label for="" class="label-detail"
-                  >- Đơn giá: {{findProductById(idSP).donGia}} Vnđ</label
+                  >- Đơn giá: {{findProductById(idSP).donGia.toLocaleString('vi-VN')}} Vnđ</label
                 >
                 <br />
                 <label for="" class="label-detail"
@@ -196,7 +196,7 @@
               />
               <br />
               <b style="color: red"
-                >Thành tiền: {{findProductById(idSP).donGia * soLuongMua}}
+                >Thành tiền: {{(findProductById(idSP).donGia * soLuongMua).toLocaleString('vi-VN')}}
                 Vnđ</b
               >
             </div>

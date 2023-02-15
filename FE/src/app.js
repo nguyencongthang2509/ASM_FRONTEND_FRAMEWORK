@@ -1,3 +1,3 @@
-var app = angular.module("myModule", ["ngResource","ngRoute", "ngStorage","ngFileUpload"]);
+var app = angular.module("myModule", ["ngResource","ngRoute", "ngStorage","ngFileUpload", "ngLocale"]);
 
 

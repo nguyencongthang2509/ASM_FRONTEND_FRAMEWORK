@@ -94,4 +94,23 @@ window.GioHangController = function (
       );
     }
   };
+
+  $scope.findGioHangById = function (id) {
+    return $scope.listGioHang.filter((gh) => {
+      return gh.id == id;
+    })[0];
+  };
+
+  $scope.tongTien = 0;
+
+  $scope.actionChecked = function () {
+    let sum = 0;
+    let listCheckbox = document.querySelectorAll('[ng-model="checkboxCon"]');
+    listCheckbox.forEach((item) => {
+      if (item.checked) {
+        sum += Number(($scope.findProductById(item.value).donGia) * $scope.findGioHangById(item.value).soLuong);
+      }
+    });
+    $scope.tongTien = sum;
+  };
 };
