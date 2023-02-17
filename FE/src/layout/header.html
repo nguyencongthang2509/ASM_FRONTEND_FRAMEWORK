@@ -16,7 +16,25 @@
         <a href="../src/dang-nhap.html">Login</a>
       </div>
       <div ng-if="showLogout" class="header-login">
-        <img class="icon" src="../../server/src/main/resources/static/image/person-fill.svg" alt="" />
+        <a
+          class="btn btn-secondary dropdown-toggle"
+          href="#"
+          role="button"
+          data-bs-toggle="dropdown"
+          aria-expanded="false"
+        >
+          <img
+            class="rounded-circle"
+            width="40px"
+            height="40px"
+            src="../../server/src/main/resources/static/image/{{avatar}}"
+            alt=""
+        /></a>
+        <ul class="dropdown-menu">
+          <li><a class="dropdown-item" href="#thong-tin-ca-nhan">Thông tin cá nhân</a></li>
+          <li><a class="dropdown-item" href="./doi-mat-khau.html">Đổi mật khẩu</a></li>
+        </ul>
+
         {{hoTen}} |
         <a ng-click="logOut()" href="../src/dang-nhap.html">Logout</a>
       </div>
@@ -54,23 +72,37 @@
     </div>
     <div class="col-lg-3">
       <div class="icon-custom">
-        <a ng-if="showLogout && showClient" href="#don-hang-cua-ban" data-toggle="tooltip" title="Đơn hàng đã mua"
-          ><img class="icon" src="../../server/src/main/resources/static/image/journal-album.svg" alt=""
+        <a
+          ng-if="showLogout && showClient"
+          href="#don-hang-cua-ban"
+          data-toggle="tooltip"
+          title="Đơn hàng đã mua"
+          ><img
+            class="icon"
+            src="../../server/src/main/resources/static/image/journal-album.svg"
+            alt=""
         /></a>
         <a href="#gio-hang" ng-if="showClient" class="cart-fill">
           <span class="position-relative">
-            <img src="../../server/src/main/resources/static/image/cart3.svg" alt="" />
-            <span ng-if="showLogout"
+            <img
+              src="../../server/src/main/resources/static/image/cart3.svg"
+              alt=""
+            />
+            <span
+              ng-if="showLogout"
               style="background-color: rgb(255, 0, 0)"
               class="position-absolute top-0 start-100 translate-middle badge rounded-pill"
             >
               <span>{{soLuongSPGioHang}}</span>
-              <span class="visually-hidden">unread messages</span>  
+              <span class="visually-hidden">unread messages</span>
             </span>
           </span>
         </a>
         <a href="" data-toggle="tooltip" title="Tìm kiếm"
-          ><img class="icon" src="../../server/src/main/resources/static/image/search-heart.svg" alt=""
+          ><img
+            class="icon"
+            src="../../server/src/main/resources/static/image/search-heart.svg"
+            alt=""
         /></a>
       </div>
     </div>

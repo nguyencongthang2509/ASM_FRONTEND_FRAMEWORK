@@ -1,0 +1,137 @@
+<div class="container">
+  <div class="row" style="text-align: center">
+    <h2>Thông tin cá nhân</h2>
+  </div>
+  <div class="content-image-ttin-ca-nhan" style="text-align: center">
+    <img
+      width="200px"
+      height="200px"
+      class="rounded-circle"
+      src="../../../server/src/main/resources/static/image/{{userCurrent.image}}"
+      alt=""
+    />
+    <br />
+    <h4>{{userCurrent.hoTen}}</h4>
+    <h5>Tài khoản: {{userCurrent.email}}</h5>
+    <h5>Ngày sinh: {{userCurrent.ngaySinh}}</h5>
+    <h5>Giới tính: {{userCurrent.gioiTinh ? "Nam" : "Nữ"}}</h5>
+    <h5>Số điện thoại: {{userCurrent.sdt}}</h5>
+    <h5>Địa chỉ: {{userCurrent.diaChi}}</h5>
+    <a
+      href=""
+      ng-click="actionUpdate()"
+      data-bs-toggle="modal"
+      data-bs-target="#updateModal"
+      class="btn btn-primary"
+      >Sửa thông tin cá nhân</a
+    >
+  </div>
+  <div class="row">
+    <div
+      class="modal fade"
+      id="updateModal"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h2 class="modal-title fs-5" id="exampleModalLabel">
+              Cập nhật thông tin cá nhân
+            </h2>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <div class="custom-modal-body">
+              <div class="row">
+                <div>Hình ảnh:</div>
+                <div class="upload-image">
+                  <img
+                    src="../../../server/src/main/resources/static/image/{{userCurrent.image}}"
+                    id="showImageUpdate"
+                    width="200px"
+                    height="200px"
+                  />
+                </div>
+                <input id="valueImageUpdate" type="file" />
+              </div>
+            </div>
+            <div class="row">
+              <br />
+              Họ và tên : <br /><input
+                type="text"
+                class="form-control"
+                ng-model="userCurrent.hoTen"
+              />
+              <br />
+              Ngày sinh : <br /><input
+                type="text"
+                class="form-control"
+                name=""
+                id=""
+                ng-model="userCurrent.ngaySinh"
+              /><br />
+              Giới tính : <br /><label for=""
+                ><input
+                  type="radio"
+                  value="true"
+                  ng-model="userCurrent.gioiTinh"
+                  ng-checked="userCurrent.gioiTinh == true"
+                  name="gender"
+                  id=""
+                />Nam</label
+              >
+              <label for=""
+                ><input
+                  type="radio"
+                  value="false"
+                  ng-model="userCurrent.gioiTinh"
+                  ng-checked="userCurrent.gioiTinh == false"
+                  name="gender"
+                  id=""
+                />Nữ</label
+              ><br />
+              Số điện thoại : <br /><input
+                type="text"
+                class="form-control"
+                name=""
+                id=""
+                ng-model="userCurrent.sdt"
+              /><br />
+              Email : <br /><input
+                type="text"
+                class="form-control"
+                name=""
+                id=""
+                ng-model="userCurrent.email"
+              /><br />
+              Địa chỉ : <br /><input
+                type="text"
+                class="form-control"
+                name=""
+                id=""
+                ng-model="userCurrent.diaChi"
+              /><br />
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+            <button type="button" ng-click="updateUser()" class="btn btn-primary">Cập nhật</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

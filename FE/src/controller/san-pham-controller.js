@@ -99,7 +99,6 @@ window.SanPhamController = function (
       var formData = new FormData();
       var file = document.querySelector("#valueImageUpdate").files[0];
       formData.append("file", file);
-      fileNameUpdate = file.name;
       document.querySelector("#showImageUpdate").src =
         URL.createObjectURL(file);
     });

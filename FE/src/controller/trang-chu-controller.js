@@ -7,13 +7,8 @@ window.TrangChuController = function (
   UserService,
   UserUpdate
 ) {
-  $scope.username = $localStorage.username;
 
-  if ($localStorage.vaiTro) {
-    $rootScope.checkAuthors = true;
-  } else {
-    $rootScope.checkAuthors = true;
-  }
+  $rootScope.checkAuthors = true;
 
   ProductService.fetchProducts().then(function () {
     $scope.listProduct = ProductService.getProducts();
@@ -28,8 +23,8 @@ window.TrangChuController = function (
   var id = "";
 
   $scope.cartAction = function (event, idNew) {
-    if ($localStorage.username == null) {
-      window.open("../src/dangnhap.html", "_self");
+    if ($localStorage.id == null) {
+      window.open("../src/dang-nhap.html", "_self");
     }
     event.preventDefault();
     $scope.soLuongMua = 0;

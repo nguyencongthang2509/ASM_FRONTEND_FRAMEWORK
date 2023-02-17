@@ -234,3 +234,13 @@ marquee {
   text-align: center;
   margin-left: 2px;
 }
+
+.btn.btn-secondary.dropdown-toggle {
+  background-color: white;
+  border: #ddd;
+}
+
+.header-login a img{
+  max-height: 40px;
+}
+

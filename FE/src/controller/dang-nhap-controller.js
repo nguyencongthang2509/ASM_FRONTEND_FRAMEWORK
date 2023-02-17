@@ -30,11 +30,7 @@ app.controller("myCtrl", function ($scope, $http, $localStorage, $window) {
     for (var item of listUsers) {
       if (item.email == $scope.email && item.matKhau == $scope.matKhau) {
         $localStorage.id = item.id;
-        $localStorage.username = item.email;
-        $localStorage.hoTen = item.hoTen;
         $localStorage.vaiTro = item.vaiTro;
-        // local: 5MB tắt máy đi ko mất
-        // cookie: 4KB mất trong 30' đến 1 tiếng
         $scope.email = "";
         $scope.matKhau = "";
         check = true;
