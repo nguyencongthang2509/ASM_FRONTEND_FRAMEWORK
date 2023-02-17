@@ -68,6 +68,8 @@ window.TrangChuController = function (
         ngaySinh: $scope.userCurrent.ngaySinh,
         gioiTinh: $scope.userCurrent.gioiTinh,
         sdt: $scope.userCurrent.sdt,
+        image: $scope.userCurrent.image,
+        diaChi: $scope.userCurrent.diaChi,
         email: $scope.userCurrent.email,
         matKhau: $scope.userCurrent.matKhau,
         vaiTro: $scope.userCurrent.vaiTro,
