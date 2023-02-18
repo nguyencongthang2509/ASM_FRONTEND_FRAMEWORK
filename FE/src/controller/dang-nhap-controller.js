@@ -25,7 +25,8 @@ app.controller("myCtrl", function ($scope, $http, $localStorage, $window) {
     }
   );
 
-  $scope.dangNhap = function () {
+  $scope.dangNhap = function (event) {
+    event.preventDefault();
     var check = false;
     for (var item of listUsers) {
       if (item.email == $scope.email && item.matKhau == $scope.matKhau) {

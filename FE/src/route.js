@@ -41,6 +41,7 @@ app.config(function ($routeProvider, $locationProvider) {
     })
     .when("/mua-hang", {
       templateUrl: "../src/pages/mua-hang.html",
+      controller: MuaHangController,
     })
     .when("/thong-tin-ca-nhan", {
       templateUrl: "../src/pages/thong-tin-ca-nhan.html",

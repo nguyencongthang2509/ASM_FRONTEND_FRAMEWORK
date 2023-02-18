@@ -2,6 +2,7 @@ window.GioHangController = function (
   $scope,
   $rootScope,
   $localStorage,
+  $location,
   ProductService,
   UserService,
   UserUpdate
@@ -46,6 +47,8 @@ window.GioHangController = function (
         ngaySinh: $scope.userCurrent.ngaySinh,
         gioiTinh: $scope.userCurrent.gioiTinh,
         sdt: $scope.userCurrent.sdt,
+        image: $scope.userCurrent.image,
+        diaChi: $scope.userCurrent.diaChi,
         email: $scope.userCurrent.email,
         matKhau: $scope.userCurrent.matKhau,
         vaiTro: $scope.userCurrent.vaiTro,
@@ -79,6 +82,8 @@ window.GioHangController = function (
           ma: $scope.userCurrent.ma,
           hoTen: $scope.userCurrent.hoTen,
           ngaySinh: $scope.userCurrent.ngaySinh,
+          image: $scope.userCurrent.image,
+          diaChi: $scope.userCurrent.diaChi,
           gioiTinh: $scope.userCurrent.gioiTinh,
           sdt: $scope.userCurrent.sdt,
           email: $scope.userCurrent.email,
@@ -117,9 +122,9 @@ window.GioHangController = function (
         ++count;
       }
     });
-    if(count == listCheckbox.length) {
+    if (count == listCheckbox.length) {
       checkboxCha.checked = true;
-    }else{
+    } else {
       checkboxCha.checked = false;
     }
     $scope.tongTien = sum;
@@ -143,5 +148,30 @@ window.GioHangController = function (
       });
     }
     $scope.tongTien = sum;
+  };
+
+  $localStorage.gioHangThanhToan = [];
+
+  $scope.muaHang = function () {
+    
+    let listCheckBoxCon = document.querySelectorAll('[ng-model="checkboxCon"]');
+    let check = false;
+    $scope.listGioHang.forEach((gh) => {
+      listCheckBoxCon.forEach((cb) => {
+        if (gh.id == cb.value && cb.checked) {
+          $localStorage.gioHangThanhToan.push(gh);
+          check = true;
+        }
+      });
+    });
+
+    console.log($localStorage.gioHangThanhToan);
+
+    if (!check) {
+      alert("Bạn chưa chọn sản phẩm để mua hàng !!!");
+      return;
+    }
+
+    $location.path("mua-hang");
   };
 };

@@ -7,7 +7,12 @@
       <thead>
         <tr style="text-align: center; background-color: rgb(236, 142, 65)">
           <th scope="col">
-            <input class="form-check-input" ng-click="actionCheckedCha()" ng-model="checkboxCha" type="checkbox" />
+            <input
+              class="form-check-input"
+              ng-click="actionCheckedCha()"
+              ng-model="checkboxCha"
+              type="checkbox"
+            />
           </th>
           <th width="20%">Hình ảnh</th>
           <th scope="col">Tên sản phẩm</th>
@@ -20,7 +25,13 @@
       <tbody>
         <tr style="text-align: center" ng-repeat="item in listGioHang">
           <th scope="row">
-            <input class="form-check-input" ng-click="actionChecked()" value="{{item.id}}" ng-model="checkboxCon" type="checkbox" />
+            <input
+              class="form-check-input"
+              ng-click="actionChecked()"
+              value="{{item.id}}"
+              ng-model="checkboxCon"
+              type="checkbox"
+            />
           </th>
           <td>
             <img
@@ -42,8 +53,13 @@
               value="{{item.soLuong}}"
             />
           </td>
-          <td>{{findProductById(item.id).donGia.toLocaleString('vi-VN')}} Vnđ</td>
-          <td>{{(findProductById(item.id).donGia * item.soLuong).toLocaleString('vi-VN')}} Vnđ</td>
+          <td>
+            {{findProductById(item.id).donGia.toLocaleString('vi-VN')}} Vnđ
+          </td>
+          <td>
+            {{(findProductById(item.id).donGia *
+            item.soLuong).toLocaleString('vi-VN')}} Vnđ
+          </td>
           <td>
             <a href="" type="button" ng-click="deleteGioHang(item.id)"
               ><div
@@ -61,8 +77,10 @@
       </tbody>
     </table>
     <div class="thanh-toan">
-      <b style="color: red">Tổng tiền: {{tongTien.toLocaleString('vi-VN')}} Vnđ</b>
-      <a href="#mua-hang" class="btn btn-primary">Mua hàng</a>
+      <b style="color: red"
+        >Tổng tiền: {{tongTien.toLocaleString('vi-VN')}} Vnđ</b
+      >
+      <button class="btn btn-primary" ng-click="muaHang()">Mua hàng</button>
     </div>
   </div>
 </div>

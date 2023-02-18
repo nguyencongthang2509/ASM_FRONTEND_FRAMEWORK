@@ -6,10 +6,10 @@
       "ma": "KH001",
       "hoTen": "Nguyễn Công Thắng",
       "ngaySinh": "25-09-2003",
-      "image": "245678195_286436283484378_7517250150558870398_n (1).jpg",
-      "diaChi": "Số nhà 7, ngách 47, ngõ 80 đường Xuân Phương, Phương Canh, Nam Từ Liêm, Hà Nội",
       "gioiTinh": "true",
       "sdt": "0971089763",
+      "image": "245678195_286436283484378_7517250150558870398_n (1).jpg",
+      "diaChi": "Số nhà 7, ngách 47, ngõ 80 đường Xuân Phương, Phương Canh, Nam Từ Liêm, Hà Nội",
       "email": "congthang25092003@gmail.com",
       "matKhau": "123456",
       "vaiTro": false,
@@ -24,7 +24,7 @@
         },
         {
           "id": 1,
-          "soLuong": 4
+          "soLuong": 3
         }
       ],
       "id": 1
@@ -33,7 +33,7 @@
       "ma": "KH002",
       "hoTen": "Nguyễn Văn A",
       "ngaySinh": "25-09-2003",
-      "image": "thang1.jpg",
+      "image": "z4072107232832_d53ac5bc0c23228a53f4d8ad5f962a53.jpg",
       "gioiTinh": false,
       "sdt": "0971089763",
       "email": "anv@gmail.com",
@@ -379,6 +379,15 @@
       "image": "245678195_286436283484378_7517250150558870398_n (1).jpg",
       "categoryId": 1,
       "id": 24
+    },
+    {
+      "id": 25,
+      "maSP": "SP241",
+      "tenSP": "Tùng sói",
+      "donGia": 120000,
+      "soLuong": 1,
+      "image": "284484554_3942736709343110_463167846455130904_n.jpg",
+      "categoryId": 2
     }
   ],
   "categories": [

@@ -40,7 +40,8 @@ window.SanPhamController = function (
   $scope.soLuongAdd = "";
   $scope.categoryAdd = "1";
 
-  $scope.addProduct = function () {
+  $scope.addProduct = function (event) {
+    event.preventDefault();
     var formData = new FormData();
 
     var file = document.querySelector("#valueImage").files[0];
@@ -54,10 +55,11 @@ window.SanPhamController = function (
       })
       .then(
         function (response) {
-          if (response.status === 200) {
-          }
+          // Thành công rồi haha
         },
-        function (error) {}
+        function (error) {
+          // Thất bại rồi xem lại code đi
+        }
       );
 
     ProductAdd.create({
@@ -78,7 +80,8 @@ window.SanPhamController = function (
 
   let idSPUpdate = 0;
 
-  $scope.updateAction = function (id) {
+  $scope.updateAction = function (event, id) {
+    event.preventDefault();
     idSPUpdate = id;
     $scope.imageUpdateModal = $scope.findProductById(id).image.toString();
     document.querySelector("#showImageUpdate").src =
@@ -103,7 +106,8 @@ window.SanPhamController = function (
         URL.createObjectURL(file);
     });
 
-  $scope.updateProduct = function () {
+  $scope.updateProduct = function (event) {
+    event.preventDefault();
     var formData = new FormData();
 
     var file = document.querySelector("#valueImageUpdate").files[0];
@@ -150,7 +154,8 @@ window.SanPhamController = function (
   $scope.checkboxFather = true;
   $scope.checkboxChecked = true;
 
-  $scope.actionChecked = function () {
+  $scope.actionChecked = function (event) {
+    event.preventDefault();
     let listProductChecked = [];
     let selectedCategories = [];
     let listCheckBox = document.querySelectorAll(
@@ -179,7 +184,8 @@ window.SanPhamController = function (
     });
   };
 
-  $scope.selectAll = function () {
+  $scope.selectAll = function (event) {
+    event.preventDefault();
     let listCheckBox = document.querySelectorAll(
       '[ng-model="checkboxChecked"]'
     );

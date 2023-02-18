@@ -36,7 +36,8 @@ window.ThongTinCaNhanController = function (
         URL.createObjectURL(file);
     });
 
-  $scope.updateUser = function () {
+  $scope.updateUser = function (event) {
+    event.preventDefault();
     var formData = new FormData();
 
     let file = document.querySelector("#valueImageUpdate").files[0];

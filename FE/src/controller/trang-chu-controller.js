@@ -39,7 +39,8 @@ window.TrangChuController = function (
     $scope.userCurrent = UserService.getUser();
   });
 
-  $scope.addToCart = function () {
+  $scope.addToCart = function (event) {
+    event.preventDefault();
     var product = $scope.findProductById(Number(id));
     var gioHangAfterUpdate = [];
     var check = true;
