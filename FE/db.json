@@ -1,7 +1,39 @@
 {
-  "order": [],
-  "orderDetail": [],
-  "user": [
+  "orders": [
+    {
+      "id": 1,
+      "maHD": "HD1676839288535",
+      "ngayTao": 1676839288536,
+      "userId": 1,
+      "thanhTien": 300000,
+      "trangThai": 0
+    },
+    {
+      "id": 2,
+      "maHD": "HD1676840123958",
+      "ngayTao": 1676840123958,
+      "userId": 1,
+      "thanhTien": 600000,
+      "trangThai": 0
+    }
+  ],
+  "orderDetails": [
+    {
+      "productId": 1,
+      "orderId": 1,
+      "soLuong": 1,
+      "donGia": 300000,
+      "id": 1
+    },
+    {
+      "productId": 1,
+      "orderId": 1,
+      "soLuong": 2,
+      "donGia": 300000,
+      "id": 2
+    }
+  ],
+  "users": [
     {
       "ma": "KH001",
       "hoTen": "Tùng sói",
@@ -13,20 +45,7 @@
       "email": "congthang25092003@gmail.com",
       "matKhau": "123456",
       "vaiTro": false,
-      "gioHang": [
-        {
-          "id": 2,
-          "soLuong": 3
-        },
-        {
-          "id": 4,
-          "soLuong": 3
-        },
-        {
-          "id": 1,
-          "soLuong": 3
-        }
-      ],
+      "gioHang": [],
       "id": 1
     },
     {
@@ -168,49 +187,54 @@
       "maSP": "SP001",
       "tenSP": "Aventador",
       "donGia": 300000,
-      "soLuong": 200,
+      "soLuong": 547,
       "moTa": "Thân giày đá bóng  được làm từ da PU cao cấp, bề mặt bóng chống bám bẩn, chống thấm nước dễ dàng sử dụng trong thời tiết ẩm ướt không lo tuổi thọ của giày. Bên cạnh đó, lớp da của phần upper được tráng một lớp firm mỏng giúp bảo vệ phần da giày tốt hơn.",
       "ngayTao": 1645380350000,
-      "soLuongBan": 0,
+      "soLuongBan": 153,
       "image": "SP001.jpg",
       "categoryId": 1,
-      "id": 1
+      "id": 1,
+      "category": {
+        "id": 1,
+        "ma": "TL001",
+        "ten": "Nike AFF"
+      }
     },
     {
-      "moTa": "Thân giày đá bóng  được làm từ da PU cao cấp, bề mặt bóng chống bám bẩn, chống thấm nước dễ dàng sử dụng trong thời tiết ẩm ướt không lo tuổi thọ của giày. Bên cạnh đó, lớp da của phần upper được tráng một lớp firm mỏng giúp bảo vệ phần da giày tốt hơn.",
-      "id": 2,
       "maSP": "SP002",
       "tenSP": "Kaito TA11",
-      "soLuongBan": 0,
       "donGia": 300000,
+      "soLuong": 450,
+      "moTa": "Thân giày đá bóng  được làm từ da PU cao cấp, bề mặt bóng chống bám bẩn, chống thấm nước dễ dàng sử dụng trong thời tiết ẩm ướt không lo tuổi thọ của giày. Bên cạnh đó, lớp da của phần upper được tráng một lớp firm mỏng giúp bảo vệ phần da giày tốt hơn.",
       "ngayTao": 1645380350010,
-      "soLuong": 300,
+      "soLuongBan": 150,
       "image": "SP002.jpg",
-      "categoryId": 3
+      "categoryId": 3,
+      "id": 2
     },
     {
-      "moTa": "Thân giày đá bóng  được làm từ da PU cao cấp, bề mặt bóng chống bám bẩn, chống thấm nước dễ dàng sử dụng trong thời tiết ẩm ướt không lo tuổi thọ của giày. Bên cạnh đó, lớp da của phần upper được tráng một lớp firm mỏng giúp bảo vệ phần da giày tốt hơn.",
-      "id": 3,
       "maSP": "SP003",
       "tenSP": "PumaSecurity",
-      "soLuongBan": 0,
       "donGia": 300000,
+      "soLuong": 450,
+      "moTa": "Thân giày đá bóng  được làm từ da PU cao cấp, bề mặt bóng chống bám bẩn, chống thấm nước dễ dàng sử dụng trong thời tiết ẩm ướt không lo tuổi thọ của giày. Bên cạnh đó, lớp da của phần upper được tráng một lớp firm mỏng giúp bảo vệ phần da giày tốt hơn.",
       "ngayTao": 1645380350020,
-      "soLuong": 300,
+      "soLuongBan": 150,
       "image": "SP003.jpg",
-      "categoryId": 2
+      "categoryId": 2,
+      "id": 3
     },
     {
-      "id": 4,
       "maSP": "SP004",
       "tenSP": "Uramy",
       "donGia": 300000,
-      "ngayTao": 1645380350030,
-      "soLuongBan": 0,
+      "soLuong": 420,
       "moTa": "Thân giày đá bóng  được làm từ da PU cao cấp, bề mặt bóng chống bám bẩn, chống thấm nước dễ dàng sử dụng trong thời tiết ẩm ướt không lo tuổi thọ của giày. Bên cạnh đó, lớp da của phần upper được tráng một lớp firm mỏng giúp bảo vệ phần da giày tốt hơn.",
-      "soLuong": 300,
+      "ngayTao": 1645380350030,
+      "soLuongBan": 180,
       "image": "SP004.jpg",
-      "categoryId": 2
+      "categoryId": 2,
+      "id": 4
     },
     {
       "id": 5,
@@ -219,22 +243,32 @@
       "ngayTao": 16453803507040,
       "donGia": 300000,
       "moTa": "Thân giày đá bóng  được làm từ da PU cao cấp, bề mặt bóng chống bám bẩn, chống thấm nước dễ dàng sử dụng trong thời tiết ẩm ướt không lo tuổi thọ của giày. Bên cạnh đó, lớp da của phần upper được tráng một lớp firm mỏng giúp bảo vệ phần da giày tốt hơn.",
-      "soLuong": 300,
+      "soLuong": 250,
       "image": "SP005.jpg",
-      "soLuongBan": 0,
-      "categoryId": 1
+      "soLuongBan": 50,
+      "categoryId": 1,
+      "category": {
+        "id": 1,
+        "ma": "TL001",
+        "ten": "Nike AFF"
+      }
     },
     {
-      "id": 6,
       "maSP": "SP006",
       "tenSP": "Kaly Avenkor",
-      "ngayTao": 1645380350050,
-      "moTa": "Thân giày đá bóng  được làm từ da PU cao cấp, bề mặt bóng chống bám bẩn, chống thấm nước dễ dàng sử dụng trong thời tiết ẩm ướt không lo tuổi thọ của giày. Bên cạnh đó, lớp da của phần upper được tráng một lớp firm mỏng giúp bảo vệ phần da giày tốt hơn.",
       "donGia": 300000,
-      "soLuong": 300,
+      "soLuong": 250,
+      "moTa": "Thân giày đá bóng  được làm từ da PU cao cấp, bề mặt bóng chống bám bẩn, chống thấm nước dễ dàng sử dụng trong thời tiết ẩm ướt không lo tuổi thọ của giày. Bên cạnh đó, lớp da của phần upper được tráng một lớp firm mỏng giúp bảo vệ phần da giày tốt hơn.",
+      "ngayTao": 1645380350050,
+      "soLuongBan": 50,
       "image": "SP006.jpg",
-      "soLuongBan": 0,
-      "categoryId": 3
+      "categoryId": 3,
+      "id": 6,
+      "category": {
+        "id": 3,
+        "ma": "TL003",
+        "ten": "Vans A12"
+      }
     },
     {
       "id": 7,
@@ -243,22 +277,32 @@
       "ngayTao": 1645380350060,
       "moTa": "Thân giày đá bóng  được làm từ da PU cao cấp, bề mặt bóng chống bám bẩn, chống thấm nước dễ dàng sử dụng trong thời tiết ẩm ướt không lo tuổi thọ của giày. Bên cạnh đó, lớp da của phần upper được tráng một lớp firm mỏng giúp bảo vệ phần da giày tốt hơn.",
       "donGia": 300000,
-      "soLuong": 300,
+      "soLuong": 250,
       "image": "SP007.jpg",
-      "soLuongBan": 0,
-      "categoryId": 4
+      "soLuongBan": 50,
+      "categoryId": 4,
+      "category": {
+        "id": 4,
+        "ma": "TL004",
+        "ten": "Puma"
+      }
     },
     {
       "id": 8,
       "maSP": "SP008",
       "ngayTao": 1645380350070,
       "tenSP": "Yamy Avenue",
-      "soLuongBan": 0,
+      "soLuongBan": 50,
       "donGia": 300000,
       "moTa": "Thân giày đá bóng  được làm từ da PU cao cấp, bề mặt bóng chống bám bẩn, chống thấm nước dễ dàng sử dụng trong thời tiết ẩm ướt không lo tuổi thọ của giày. Bên cạnh đó, lớp da của phần upper được tráng một lớp firm mỏng giúp bảo vệ phần da giày tốt hơn.",
-      "soLuong": 300,
+      "soLuong": 250,
       "image": "SP008.jpg",
-      "categoryId": 3
+      "categoryId": 3,
+      "category": {
+        "id": 3,
+        "ma": "TL003",
+        "ten": "Vans A12"
+      }
     },
     {
       "id": 9,
@@ -285,16 +329,16 @@
       "categoryId": 2
     },
     {
-      "id": 11,
       "maSP": "SP011",
-      "soLuongBan": 0,
       "tenSP": "Kaito TA11 TF KID",
       "donGia": 300000,
-      "ngayTao": 1645380350100,
+      "soLuong": 297,
       "moTa": "Thân giày đá bóng  được làm từ da PU cao cấp, bề mặt bóng chống bám bẩn, chống thấm nước dễ dàng sử dụng trong thời tiết ẩm ướt không lo tuổi thọ của giày. Bên cạnh đó, lớp da của phần upper được tráng một lớp firm mỏng giúp bảo vệ phần da giày tốt hơn.",
-      "soLuong": 300,
+      "ngayTao": 1645380350100,
+      "soLuongBan": 3,
       "image": "SP011.jpg",
-      "categoryId": 4
+      "categoryId": 4,
+      "id": 11
     },
     {
       "id": 12,
@@ -359,11 +403,11 @@
     {
       "maSP": "SP17",
       "tenSP": "Dr Thanh",
-      "ngayTao": 1645380350170,
-      "soLuongBan": 0,
       "donGia": 10000,
-      "soLuong": 12,
+      "soLuong": 50,
       "moTa": "Thân giày đá bóng  được làm từ da PU cao cấp, bề mặt bóng chống bám bẩn, chống thấm nước dễ dàng sử dụng trong thời tiết ẩm ướt không lo tuổi thọ của giày. Bên cạnh đó, lớp da của phần upper được tráng một lớp firm mỏng giúp bảo vệ phần da giày tốt hơn.",
+      "ngayTao": 1645380350170,
+      "soLuongBan": 7,
       "image": "385835b16745045e23dac14a1e456ef6.jpg",
       "categoryId": 1,
       "id": 17

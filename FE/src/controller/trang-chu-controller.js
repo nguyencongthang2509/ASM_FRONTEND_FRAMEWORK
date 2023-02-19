@@ -1,7 +1,6 @@
 window.TrangChuController = function (
   $scope,
   $localStorage,
-  $http,
   $rootScope,
   ProductService,
   UserService,

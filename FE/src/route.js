@@ -1,7 +1,4 @@
 app.config(function ($routeProvider, $locationProvider) {
-  // $routeProvider : Chuyển trang
-  //   Xóa khoảng trắng trên đường dẫn
-
   $locationProvider.hashPrefix("");
   $routeProvider
     .when("/trang-chu", {

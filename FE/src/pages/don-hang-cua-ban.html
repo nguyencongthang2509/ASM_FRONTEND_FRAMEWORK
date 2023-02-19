@@ -1,1 +1,71 @@
-<h1>Đơn hàng của bạn</h1>
+<div class="container">
+  <div class="row">
+    <div class="link-product">
+      <ul class="nav justify-content-center">
+        <li class="nav-item">
+          <a
+            class="nav-link active"
+            value="0"
+            ng-model="trangThai"
+            aria-current="page"
+            href=""
+            >Chờ xác nhận</a
+          >
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" value="1" ng-model="trangThai" href=""
+            >Chờ lấy hàng</a
+          >
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" value="2" ng-model="trangThai" href=""
+            >Đang giao</a
+          >
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" value="3" ng-model="trangThai" href="">Đã giao</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <hr />
+  <div class="row">
+    <div class="col-3"><h4>Mã hóa đơn</h4></div>
+    <div class="col-2"><h4>Ngày đặt hàng</h4></div>
+    <div class="col-2"><h4>Thành tiền</h4></div>
+    <div class="col-2"><h4>Trạng thái</h4></div>
+    <div class="col-3"><h4>Hành động</h4></div>
+  </div>
+  <hr />
+  <div ng-repeat="item in listOrders" class="row">
+    <div class="col-3"><h6>{{item.maHD}}</h6></div>
+    <div class="col-2">
+      <h6>{{item.ngayTao | date:'dd/MM/yyyy HH:mm:ss'}}</h6>
+    </div>
+    <div class="col-2">
+      <h6>{{item.thanhTien.toLocaleString('vi-VN')}} Vnđ</h6>
+    </div>
+    <div class="col-2">
+      <h6>
+        {{item.trangThai == 0 ? 'Chờ xác nhận' : (item.trangThai == 1 ? 'Chờ lấy
+        hàng' : (item.trangThai == 2 ? 'Đang giao' : 'Đã giao'))}}
+      </h6>
+    </div>
+    <div class="col-3">
+      <h6>
+        <a href="#/detail-sanpham/{{item.id}}"
+          ><div
+            data-toggle="tooltip"
+            title="Xem chi tiết"
+            class="eye-custom-don-hang"
+          >
+            <img
+              src="../../server/src/main/resources/static/image/eye-fill.svg"
+              alt=""
+            /></div
+        ></a>
+      </h6>
+    </div>
+    <hr />
+  </div>
+</div>
