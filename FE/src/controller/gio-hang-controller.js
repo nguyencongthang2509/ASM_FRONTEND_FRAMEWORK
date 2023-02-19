@@ -153,7 +153,6 @@ window.GioHangController = function (
   $localStorage.gioHangThanhToan = [];
 
   $scope.muaHang = function () {
-    
     let listCheckBoxCon = document.querySelectorAll('[ng-model="checkboxCon"]');
     let check = false;
     $scope.listGioHang.forEach((gh) => {
@@ -164,8 +163,6 @@ window.GioHangController = function (
         }
       });
     });
-
-    console.log($localStorage.gioHangThanhToan);
 
     if (!check) {
       alert("Bạn chưa chọn sản phẩm để mua hàng !!!");

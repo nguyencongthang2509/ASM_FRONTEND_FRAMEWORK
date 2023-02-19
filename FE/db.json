@@ -4,11 +4,11 @@
   "user": [
     {
       "ma": "KH001",
-      "hoTen": "Nguyễn Công Thắng",
+      "hoTen": "Tùng sói",
       "ngaySinh": "25-09-2003",
       "gioiTinh": "true",
       "sdt": "0971089763",
-      "image": "245678195_286436283484378_7517250150558870398_n (1).jpg",
+      "image": "284484554_3942736709343110_463167846455130904_n.jpg",
       "diaChi": "Số nhà 7, ngách 47, ngõ 80 đường Xuân Phương, Phương Canh, Nam Từ Liêm, Hà Nội",
       "email": "congthang25092003@gmail.com",
       "matKhau": "123456",
@@ -33,7 +33,7 @@
       "ma": "KH002",
       "hoTen": "Nguyễn Văn A",
       "ngaySinh": "25-09-2003",
-      "image": "z4072107232832_d53ac5bc0c23228a53f4d8ad5f962a53.jpg",
+      "image": "link3.jpg",
       "gioiTinh": false,
       "sdt": "0971089763",
       "email": "anv@gmail.com",
@@ -309,85 +309,13 @@
       "categoryId": 1
     },
     {
-      "id": 17,
-      "maSP": "SP171",
-      "tenSP": "Best Seller",
-      "donGia": 120000,
-      "soLuong": 12,
-      "image": "279907381_752793049220164_4892220650263376170_n.jpg",
-      "categoryId": 3
-    },
-    {
-      "maSP": "SP181",
-      "tenSP": "Sản phẩm 12",
+      "maSP": "SP161",
+      "tenSP": "Giày đinh",
       "donGia": 300000,
-      "soLuong": 111,
-      "image": "328635377_5813434642056438_2068700283833234874_n.jpg",
-      "categoryId": 2,
-      "id": 18
-    },
-    {
-      "id": 19,
-      "maSP": "SP181",
-      "tenSP": "sđsfgdg",
-      "donGia": 120000,
       "soLuong": 12,
-      "image": "2.png",
-      "categoryId": 1
-    },
-    {
-      "maSP": "SP191",
-      "tenSP": "Tọt",
-      "donGia": 150000,
-      "soLuong": 1,
-      "image": "284795091_571158911036572_1785280224089737630_n.jpg",
+      "image": "278647747_558235158918064_827646886729820002_n.jpg",
       "categoryId": 1,
-      "id": 20
-    },
-    {
-      "maSP": "SP201",
-      "tenSP": "Thắng",
-      "donGia": 210000,
-      "soLuong": 12,
-      "image": "245678195_286436283484378_7517250150558870398_n (1).jpg",
-      "categoryId": 2,
-      "id": 21
-    },
-    {
-      "id": 22,
-      "maSP": "SP211",
-      "tenSP": "Giày vans",
-      "donGia": 250000,
-      "soLuong": 200,
-      "image": "background.webp",
-      "categoryId": 3
-    },
-    {
-      "id": 23,
-      "maSP": "SP221",
-      "tenSP": "1212",
-      "donGia": 1212121,
-      "soLuong": 121,
-      "image": "325965728_1138678596787291_7537674635508760342_n.jpg",
-      "categoryId": 1
-    },
-    {
-      "maSP": "SP231",
-      "tenSP": "abc",
-      "donGia": 211111,
-      "soLuong": 12,
-      "image": "245678195_286436283484378_7517250150558870398_n (1).jpg",
-      "categoryId": 1,
-      "id": 24
-    },
-    {
-      "id": 25,
-      "maSP": "SP241",
-      "tenSP": "Tùng sói",
-      "donGia": 120000,
-      "soLuong": 1,
-      "image": "284484554_3942736709343110_463167846455130904_n.jpg",
-      "categoryId": 2
+      "id": 17
     }
   ],
   "categories": [

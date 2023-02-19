@@ -10,7 +10,7 @@
               ><input
                 type="checkbox"
                 ng-model="checkboxFather"
-                ng-change="selectAll($event)"
+                ng-change="selectAll()"
                 class="form-check-input"
                 name="category"
               />
@@ -22,7 +22,7 @@
               ><input
                 type="checkbox"
                 value="{{item.id}}"
-                ng-change="actionChecked($event)"
+                ng-change="actionChecked()"
                 ng-model="checkboxChecked"
                 class="form-check-input"
                 name="category"
@@ -40,6 +40,7 @@
               <input
                 class="form-control me-2"
                 type="search"
+                ng-change="searchAction()"
                 ng-model="search"
                 placeholder="Search"
                 aria-label="Search"
@@ -67,7 +68,9 @@
             <th>Category</th>
             <th>Action</th>
           </tr>
-          <tr ng-repeat="item in list | filter : {tenSP: search}">
+          <tr
+            ng-repeat="item in filtered = (list | filter: { tenSP: search }) | startFrom:(currentPage - 1) * itemsPerPage | limitTo:itemsPerPage"
+          >
             <td>
               <img
                 src="../../server/src/main/resources/static/image/{{item.image}}"
@@ -114,17 +117,35 @@
         <nav class="page-custom" aria-label="Page navigation example">
           <ul class="pagination">
             <li class="page-item">
-              <a class="page-link" href="#" aria-label="Previous">
+              <button
+                class="page-link"
+                ng-disabled="currentPage == 1"
+                ng-click="currentPage = currentPage - 1"
+                href=""
+                aria-label="Previous"
+              >
                 <span aria-hidden="true">&laquo;</span>
-              </a>
+              </button>
             </li>
-            <li class="page-item"><a class="page-link" href="#">1</a></li>
-            <li class="page-item"><a class="page-link" href="#">2</a></li>
-            <li class="page-item"><a class="page-link" href="#">3</a></li>
+            <li
+              ng-repeat="n in genArray(totalPages()) track by $index"
+              ng-class="{ active: n == currentPage }"
+              ng-click="setCurrentPage(n)"
+              class="page-item"
+            >
+              <a class="page-link" href="">{{n}}</a>
+            </li>
+            
             <li class="page-item">
-              <a class="page-link" href="#" aria-label="Next">
+              <button
+                class="page-link"
+                href=""
+                ng-disabled="currentPage >= totalPages()"
+                ng-click="currentPage = currentPage + 1"
+                aria-label="Next"
+              >
                 <span aria-hidden="true">&raquo;</span>
-              </a>
+              </button>
             </li>
           </ul>
         </nav>

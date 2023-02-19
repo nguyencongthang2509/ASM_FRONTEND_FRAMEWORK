@@ -63,8 +63,7 @@ window.SanPhamController = function (
       );
 
     ProductAdd.create({
-      id: Number($scope.list.length) + 1,
-      maSP: "SP" + Number($scope.list.length) + 1,
+      maSP: "SP" + Number($scope.list.length) + Number(1),
       tenSP: $scope.tenSPAdd,
       donGia: $scope.donGiaAdd,
       soLuong: $scope.soLuongAdd,
@@ -112,6 +111,9 @@ window.SanPhamController = function (
 
     var file = document.querySelector("#valueImageUpdate").files[0];
     var fileNameUpdate = "";
+
+    console.log(file);
+
     if (file != null) {
       formData.append("file", file);
       fileNameUpdate = file.name;
@@ -154,8 +156,7 @@ window.SanPhamController = function (
   $scope.checkboxFather = true;
   $scope.checkboxChecked = true;
 
-  $scope.actionChecked = function (event) {
-    event.preventDefault();
+  $scope.actionChecked = function () {
     let listProductChecked = [];
     let selectedCategories = [];
     let listCheckBox = document.querySelectorAll(
@@ -184,8 +185,7 @@ window.SanPhamController = function (
     });
   };
 
-  $scope.selectAll = function (event) {
-    event.preventDefault();
+  $scope.selectAll = function () {
     let listCheckBox = document.querySelectorAll(
       '[ng-model="checkboxChecked"]'
     );
@@ -203,5 +203,30 @@ window.SanPhamController = function (
       });
       $scope.list = [];
     }
+  };
+
+  $scope.currentPage = 1;
+  $scope.itemsPerPage = 5;
+
+  $scope.totalPages = function () {
+    return Math.ceil($scope.list.length / $scope.itemsPerPage);
+  };
+
+  $scope.genArray = function (n) {
+    let array = [];
+    for (let i = 1; i <= n; i++) {
+      array.push(i);
+    }
+    return array;
+  };
+
+  $scope.setCurrentPage = function (page) {
+    $scope.currentPage = page;
+  };
+
+  $scope.searchAction = function () {
+    $scope.totalPages = function () {
+      return Math.ceil($scope.filtered.length / $scope.itemsPerPage);
+    };
   };
 };

@@ -1,28 +1,58 @@
 <div class="container">
   <h1 style="text-align: center">Mua hàng</h1>
+  <hr />
   <div class="row">
-    <table class="table table-bordered">
-      <thead>
-        <tr style="text-align: center; background-color: rgb(236, 142, 65)">
-          <th scope="col">
-            <input
-              class="form-check-input"
-              ng-click="actionCheckedCha()"
-              ng-model="checkboxCha"
-              type="checkbox"
-            />
-          </th>
-          <th width="20%">Hình ảnh</th>
-          <th scope="col">Tên sản phẩm</th>
-          <th width="100px" scope="col">Số lượng</th>
-          <th scope="col">Đơn giá</th>
-          <th scope="col">Thành tiền</th>
-          <th scope="col">Hành động</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr></tr>
-      </tbody>
-    </table>
+    <div class="col-4"><h4>Sản phẩm</h4></div>
+    <div class="col-2"><h4>Đơn giá</h4></div>
+    <div class="col-2"><h4>Số lượng</h4></div>
+    <div class="col-2"><h4>Thành tiền</h4></div>
+    <div class="col-2"><h4>Hành động</h4></div>
+  </div>
+  <hr />
+  <div class="row" ng-repeat="item in listGioHangMuaHang">
+    <div class="col-4">
+      <h5>
+        <img
+          src="../../../server/src/main/resources/static/image/{{findProductById(item.id).image}}"
+          width="150px"
+          height="150px"
+          alt=""
+        />
+        {{findProductById(item.id).tenSP}}
+      </h5>
+    </div>
+    <div class="col-2" style="margin-top: auto; margin-bottom: auto">
+      <h6>{{findProductById(item.id).donGia.toLocaleString('vi-VN')}} Vnđ</h6>
+    </div>
+    <div class="col-2" style="margin-top: auto; margin-bottom: auto">
+      <h6>{{item.soLuong}}</h6>
+    </div>
+    <div class="col-2" style="margin-top: auto; margin-bottom: auto">
+      <h6>
+        {{((findProductById(item.id).donGia) *
+        (item.soLuong)).toLocaleString('vi-VN')}} Vnđ
+      </h6>
+    </div>
+    <div class="col-2" style="margin-top: auto; margin-bottom: auto">
+      <a href="" type="button" ng-click="deleteGioHang(item.id)"
+        ><div
+          data-toggle="tooltip"
+          title="Xóa khỏi giỏ hàng"
+          class="pencil-custom"
+        >
+          <img
+            src="../../server/src/main/resources/static/image/trash3-fill.svg"
+            alt=""
+          /></div
+      ></a>
+    </div>
+    <hr />
+  </div>
+  <div style="text-align: center">
+    Tổng tiền thanh toán: 
+    <hr>
+    <a href="" class="btn btn-primary">Đặt hàng</a>
+    <a href="#thong-tin-ca-nhan" class="btn btn-success">Thay đổi địa chỉ</a>
+    <a href="#trang-chu" class="btn btn-info">Tiếp tục mua sắm</a>
   </div>
 </div>
