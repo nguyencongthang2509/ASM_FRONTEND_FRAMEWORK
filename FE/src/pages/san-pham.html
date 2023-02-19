@@ -135,7 +135,7 @@
             >
               <a class="page-link" href="">{{n}}</a>
             </li>
-            
+
             <li class="page-item">
               <button
                 class="page-link"
@@ -204,6 +204,13 @@
                   name=""
                   id=""
                   ng-model="donGiaAdd"
+                /><br />
+                Mô tả : <br /><input
+                  type="text"
+                  class="form-control"
+                  name=""
+                  id=""
+                  ng-model="moTaAdd"
                 /><br />
                 Category:
                 <select name="" class="form-control" ng-model="categoryAdd">
@@ -293,6 +300,29 @@
                   id=""
                   ng-model="donGiaUpdate"
                 /><br />
+                Mô tả : <br /><input
+                  type="text"
+                  class="form-control"
+                  name=""
+                  id=""
+                  ng-model="moTaUpdate"
+                /><br />
+                <input
+                  type="text"
+                  class="form-control"
+                  name=""
+                  id=""
+                  hidden
+                  ng-model="soLuongBanUpdate"
+                />
+                <input
+                  type="text"
+                  hidden
+                  class="form-control"
+                  name=""
+                  id=""
+                  ng-model="ngayTaoUpdate"
+                />
                 Category:
                 <select
                   name=""

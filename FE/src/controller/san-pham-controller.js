@@ -38,6 +38,7 @@ window.SanPhamController = function (
   $scope.tenSPAdd = "";
   $scope.donGiaAdd = "";
   $scope.soLuongAdd = "";
+  $scope.moTaAdd = "";
   $scope.categoryAdd = "1";
 
   $scope.addProduct = function (event) {
@@ -62,12 +63,17 @@ window.SanPhamController = function (
         }
       );
 
+    let maSP = Number($scope.list.length) + 1;
+
     ProductAdd.create({
-      maSP: "SP" + Number($scope.list.length) + Number(1),
+      maSP: "SP" + maSP,
       tenSP: $scope.tenSPAdd,
       donGia: $scope.donGiaAdd,
       soLuong: $scope.soLuongAdd,
       image: file.name,
+      soLuongBan: 0,
+      ngayTao: new Date().getTime(),
+      moTa: $scope.moTaAdd,
       categoryId: Number($scope.categoryAdd),
     }).$promise.then(
       function (response) {
@@ -88,7 +94,10 @@ window.SanPhamController = function (
       $scope.findProductById(id).image.toString();
     $scope.tenSPUpdate = $scope.findProductById(id).tenSP.toString();
     $scope.soLuongUpdate = $scope.findProductById(id).soLuong;
+    $scope.moTaUpdate = $scope.findProductById(id).moTa;
     $scope.donGiaUpdate = $scope.findProductById(id).donGia;
+    $scope.soLuongBanUpdate = $scope.findProductById(id).soLuongBan;
+    $scope.ngayTaoUpdate = $scope.findProductById(id).ngayTao;
     // $scope.categoryUpdate = Number($scope.findProductById(id).categoryId);
     document.querySelector("#categoryUpdateSelected").value = Number(
       $scope.findProductById(id).categoryId
@@ -137,6 +146,9 @@ window.SanPhamController = function (
         tenSP: $scope.tenSPUpdate,
         donGia: $scope.donGiaUpdate,
         soLuong: $scope.soLuongUpdate,
+        moTa: $scope.moTaUpdate,
+        ngayTao: $scope.ngayTaoUpdate,
+        soLuongBan: $scope.soLuongBanUpdate,
         image: fileNameUpdate,
         categoryId: Number(
           document.querySelector("#categoryUpdateSelected").value
