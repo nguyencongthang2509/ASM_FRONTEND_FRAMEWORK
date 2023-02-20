@@ -6,7 +6,7 @@ window.DetailSanphamController = function (
   AuthorizationService
 ) {
 
-  $rootScope.checkAuthors = AuthorizationService.checkAuthors();
+  $rootScope.checkAuthors = !AuthorizationService.checkAuthors();
 
   ProductService.fetchProducts().then(function () {
     $scope.product = ProductService.getProducts().filter((product) => {

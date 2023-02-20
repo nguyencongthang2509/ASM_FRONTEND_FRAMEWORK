@@ -6,6 +6,7 @@
           <a
             class="nav-link active"
             value="0"
+            ng-class="{ 'active': activeLink === 0 }"
             ng-model="trangThai"
             aria-current="page"
             href=""
@@ -30,8 +31,9 @@
         <li class="nav-item">
           <a
             class="nav-link"
-            ng-click="actionClick(1)"
             value="1"
+            ng-click="actionClick(1)"
+            ng-class="{ 'active': activeLink === 1 }"
             ng-model="trangThai"
             href=""
             >Chờ lấy hàng
@@ -55,6 +57,7 @@
           <a
             class="nav-link"
             ng-click="actionClick(2)"
+            ng-class="{ 'active': activeLink === 2 }"
             value="2"
             ng-model="trangThai"
             href=""
@@ -79,6 +82,7 @@
           <a
             class="nav-link"
             ng-click="actionClick(3)"
+            ng-class="{ 'active': activeLink === 3 }"
             value="3"
             ng-model="trangThai"
             href=""
@@ -93,11 +97,11 @@
   </div>
   <hr />
   <div class="row">
-    <div class="col-3"><h4>Mã hóa đơn</h4></div>
-    <div class="col-2"><h4>Ngày đặt hàng</h4></div>
-    <div class="col-2"><h4>Thành tiền</h4></div>
-    <div class="col-2"><h4>Trạng thái</h4></div>
-    <div class="col-3"><h4>Hành động</h4></div>
+    <div class="col-3"><h5>Mã hóa đơn</h5></div>
+    <div class="col-2"><h5>Ngày đặt hàng</h5></div>
+    <div class="col-2"><h5>Thành tiền</h5></div>
+    <div class="col-2"><h5>Trạng thái</h5></div>
+    <div class="col-3"><h5>Hành động</h5></div>
   </div>
   <hr />
   <div
@@ -119,7 +123,7 @@
     </div>
     <div class="col-3">
       <h6>
-        <a href="#/chi-tiet-don-hang/{{item.id}}"
+        <a href="#/chi-tiet-don-hang-cua-ban/{{item.id}}"
           ><div
             data-toggle="tooltip"
             title="Xem chi tiết"

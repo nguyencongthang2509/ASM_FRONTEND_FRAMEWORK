@@ -1,6 +1,13 @@
 app.controller(
   "myCtrl",
-  function ($scope, $localStorage, UserService, UsersService, OrderServiceByUser) {
+  function (
+    $scope,
+    $localStorage,
+    UserService,
+    UsersService,
+    OrderServiceByUser,
+    $location
+  ) {
     let userCurrent = {};
 
     $localStorage.checkAuthors = true;
@@ -53,12 +60,30 @@ app.controller(
     OrderServiceByUser.fetchOrders($localStorage.id).then(function () {
       let listOrders = OrderServiceByUser.getOrders();
       let count = 0;
-      for(let item of listOrders){
-        if(item.trangThai != 3){
-          count ++;
+      for (let item of listOrders) {
+        if (item.trangThai != 3) {
+          count++;
         }
       }
-      $scope.soLuongDonHang = count; 
+      $scope.soLuongDonHang = count;
     });
+
+    if ($location.path() == "/trang-chu") {
+      $scope.activeMenu = 0;
+    } else if ($location.path() == "/san-pham-khach-hang") {
+      $scope.activeMenu = 1;
+    } else if ($location.path() == "/gioi-thieu") {
+      $scope.activeMenu = 2;
+    } else if ($location.path() == "/ve-chung-toi") {
+      $scope.activeMenu = 3;
+    } else if ($location.path() == "/san-pham") {
+      $scope.activeMenu = 4;
+    } else if ($location.path() == "/don-hang") {
+      $scope.activeMenu = 5;
+    }
+
+    $scope.actionMenu = function (trangThai) {
+      $scope.activeMenu = trangThai;
+    };
   }
 );

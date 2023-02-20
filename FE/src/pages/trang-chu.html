@@ -90,12 +90,25 @@
     <div class="link-product">
       <ul class="nav justify-content-center">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" ng-click="sanPhamMoi()" href=""
+          <a
+            class="nav-link active"
+            ng-class="{ 'active': activeTrangChu === 0}"
+            value="0"
+            aria-current="page"
+            ng-click="sanPhamMoi(0)"
+            href=""
             >Sản phẩm mới</a
           >
         </li>
         <li class="nav-item">
-          <a class="nav-link" ng-click="banChay()" href="">Bán chạy</a>
+          <a
+            class="nav-link"
+            ng-class="{ 'active': activeTrangChu === 1}"
+            value="1"
+            ng-click="banChay(1)"
+            href=""
+            >Bán chạy</a
+          >
         </li>
       </ul>
     </div>

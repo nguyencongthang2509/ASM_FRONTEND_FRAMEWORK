@@ -23,6 +23,30 @@
       "userId": 1,
       "thanhTien": 10000,
       "trangThai": 0
+    },
+    {
+      "id": 4,
+      "maHD": "HD1676880664752",
+      "ngayTao": 1676880664752,
+      "userId": 1,
+      "thanhTien": 10000,
+      "trangThai": 0
+    },
+    {
+      "id": 5,
+      "maHD": "HD1676886946679",
+      "ngayTao": 1676886946679,
+      "userId": 1,
+      "thanhTien": 2700000,
+      "trangThai": 0
+    },
+    {
+      "id": 6,
+      "maHD": "HD1676886969318",
+      "ngayTao": 1676886969318,
+      "userId": 1,
+      "thanhTien": 300000,
+      "trangThai": 0
     }
   ],
   "orderDetails": [
@@ -70,6 +94,33 @@
       "image": "385835b16745045e23dac14a1e456ef6.jpg",
       "donGia": 10000,
       "id": 5
+    },
+    {
+      "productId": 17,
+      "orderId": 4,
+      "soLuong": 1,
+      "tenSP": "Dr Thanh",
+      "image": "385835b16745045e23dac14a1e456ef6.jpg",
+      "donGia": 10000,
+      "id": 6
+    },
+    {
+      "productId": 16,
+      "orderId": 5,
+      "soLuong": 9,
+      "tenSP": "Kaito TA11 TF KID",
+      "image": "SP016.jpg",
+      "donGia": 300000,
+      "id": 7
+    },
+    {
+      "productId": 15,
+      "orderId": 6,
+      "soLuong": 1,
+      "tenSP": "Kaito TA11 TF KID",
+      "image": "SP015.jpg",
+      "donGia": 300000,
+      "id": 8
     }
   ],
   "users": [
@@ -84,7 +135,12 @@
       "email": "congthang25092003@gmail.com",
       "matKhau": "123456",
       "vaiTro": false,
-      "gioHang": [],
+      "gioHang": [
+        {
+          "id": 1,
+          "soLuong": 1
+        }
+      ],
       "id": 1
     },
     {
@@ -416,22 +472,27 @@
       "maSP": "SP015",
       "ngayTao": 1645380350150,
       "tenSP": "Kaito TA11 TF KID",
-      "soLuongBan": 0,
+      "soLuongBan": 1,
       "moTa": "Thân giày đá bóng  được làm từ da PU cao cấp, bề mặt bóng chống bám bẩn, chống thấm nước dễ dàng sử dụng trong thời tiết ẩm ướt không lo tuổi thọ của giày. Bên cạnh đó, lớp da của phần upper được tráng một lớp firm mỏng giúp bảo vệ phần da giày tốt hơn.",
       "donGia": 300000,
-      "soLuong": 300,
+      "soLuong": 299,
       "image": "SP015.jpg",
-      "categoryId": 4
+      "categoryId": 4,
+      "category": {
+        "id": 4,
+        "ma": "TL004",
+        "ten": "Puma"
+      }
     },
     {
       "id": 16,
-      "soLuongBan": 1,
+      "soLuongBan": 10,
       "ngayTao": 1645380350160,
       "maSP": "SP016",
       "moTa": "Thân giày đá bóng  được làm từ da PU cao cấp, bề mặt bóng chống bám bẩn, chống thấm nước dễ dàng sử dụng trong thời tiết ẩm ướt không lo tuổi thọ của giày. Bên cạnh đó, lớp da của phần upper được tráng một lớp firm mỏng giúp bảo vệ phần da giày tốt hơn.",
       "tenSP": "Kaito TA11 TF KID",
       "donGia": 300000,
-      "soLuong": 299,
+      "soLuong": 290,
       "image": "SP016.jpg",
       "categoryId": 1,
       "category": {
@@ -444,18 +505,13 @@
       "maSP": "SP17",
       "tenSP": "Dr Thanh",
       "donGia": 10000,
-      "soLuong": 48,
+      "soLuong": 47,
       "moTa": "Thân giày đá bóng  được làm từ da PU cao cấp, bề mặt bóng chống bám bẩn, chống thấm nước dễ dàng sử dụng trong thời tiết ẩm ướt không lo tuổi thọ của giày. Bên cạnh đó, lớp da của phần upper được tráng một lớp firm mỏng giúp bảo vệ phần da giày tốt hơn.",
       "ngayTao": 1645380350170,
-      "soLuongBan": 9,
-      "image": "385835b16745045e23dac14a1e456ef6.jpg",
+      "soLuongBan": 10,
+      "image": "284484554_3942736709343110_463167846455130904_n.jpg",
       "categoryId": 1,
-      "id": 17,
-      "category": {
-        "id": 1,
-        "ma": "TL001",
-        "ten": "Nike AFF"
-      }
+      "id": 17
     }
   ],
   "categories": [

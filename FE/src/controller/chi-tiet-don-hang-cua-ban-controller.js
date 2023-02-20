@@ -1,4 +1,4 @@
-window.ChiTietDonHangController = function (
+window.ChiTietDonHangCuaBanController = function (
   $scope,
   $rootScope,
   $routeParams,
@@ -6,7 +6,7 @@ window.ChiTietDonHangController = function (
   OrderDetailService,
   AuthorizationService
 ) {
-  $rootScope.checkAuthors = !AuthorizationService.checkAuthors();
+  $rootScope.checkAuthors = AuthorizationService.checkAuthors();
 
   let orderId = $routeParams.id;
 

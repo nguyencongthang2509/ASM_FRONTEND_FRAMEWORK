@@ -1,12 +1,8 @@
 <div class="container">
   <div class="row custom">
     <div class="col-lg-4 custom">
-      <h4 ng-if="showClient">
-        <strong
-          ><marquee behavior="" direction=""
-            >Xin kính chào quý khách !!!</marquee
-          ></strong
-        >
+      <h4 ng-if="showClient"><em>
+        ToiBanGiay</em><input type="text" id="searchInput" class="form-control" placeholder="Search">
       </h4>
     </div>
     <div class="col-lg-5 custom"></div>
@@ -53,24 +49,72 @@
       <nav class="header_menu">
         <ul class="nav">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#trang-chu"
+            <a
+              class="nav-link"
+              value="0"
+              ng-click="actionMenu(0)"
+              ng-class="{ 'active': activeMenu === 0 }"
+              aria-current="page"
+              href="#trang-chu"
               >Trang chủ</a
             >
           </li>
           <li ng-if="showClient" class="nav-item">
-            <a class="nav-link" href="#san-pham-khach-hang">Sản phẩm</a>
+            <a
+              class="nav-link"
+              ng-click="actionMenu(1)"
+              ng-class="{ 'active': activeMenu === 1 }"
+              value="1"
+              href="#san-pham-khach-hang"
+              >Sản phẩm</a
+            >
           </li>
           <li ng-if="showClient" class="nav-item">
-            <a class="nav-link" href="#gioi-thieu">Giới thiệu</a>
+            <a
+              class="nav-link"
+              ng-click="actionMenu(2)"
+              ng-class="{ 'active': activeMenu === 2 }"
+              value="2"
+              href="#gioi-thieu"
+              >Giới thiệu</a
+            >
           </li>
           <li ng-if="showClient" class="nav-item">
-            <a class="nav-link" href="#ve-chung-toi">Về chúng tôi</a>
+            <a
+              class="nav-link"
+              ng-click="actionMenu(3)"
+              ng-class="{ 'active': activeMenu === 3 }"
+              value="3"
+              href="#ve-chung-toi"
+              >Về chúng tôi</a
+            >
           </li>
           <li ng-if="showAdmin" class="nav-item">
-            <a class="nav-link" href="#san-pham">Sản phẩm</a>
+            <a
+              class="nav-link"
+              ng-click="actionMenu(4)"
+              ng-class="{ 'active': activeMenu === 4 }"
+              value="4"
+              href="#san-pham"
+              >Sản phẩm</a
+            >
           </li>
           <li ng-if="showAdmin" class="nav-item">
-            <a class="nav-link" href="#don-hang">Đơn hàng</a>
+            <a
+              class="nav-link"
+              href="#the-loai"
+              >Thể loại</a
+            >
+          </li>
+          <li ng-if="showAdmin" class="nav-item">
+            <a
+              class="nav-link"
+              ng-click="actionMenu(5)"
+              ng-class="{ 'active': activeMenu === 5 }"
+              value="5"
+              href="#don-hang"
+              >Đơn hàng</a
+            >
           </li>
         </ul>
       </nav>

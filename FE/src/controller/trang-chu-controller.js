@@ -7,7 +7,6 @@ window.TrangChuController = function (
   $filter,
   UserUpdate
 ) {
-  
   $rootScope.checkAuthors = true;
 
   ProductService.fetchProducts().then(function () {
@@ -86,13 +85,17 @@ window.TrangChuController = function (
     );
   };
 
-  $scope.sanPhamMoi = function () {
+  $scope.activeTrangChu = 0;
+
+  $scope.sanPhamMoi = function (index) {
     $scope.filteredData = $filter("orderBy")($scope.listProduct, "-ngayTao");
     $scope.filteredData = $scope.filteredData.slice(0, 8);
+    $scope.activeTrangChu = index;
   };
 
-  $scope.banChay = function () {
+  $scope.banChay = function (index) {
     $scope.filteredData = $filter("orderBy")($scope.listProduct, "-soLuongBan");
     $scope.filteredData = $scope.filteredData.slice(0, 8);
+    $scope.activeTrangChu = index;
   };
 };

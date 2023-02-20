@@ -15,6 +15,7 @@ app.config(function ($routeProvider, $locationProvider) {
     })
     .when("/san-pham-khach-hang", {
       templateUrl: "../src/pages/san-pham-khach-hang.html",
+      controller: SanPhamKhachHangController
     })
     .when("/don-hang-cua-ban", {
       templateUrl: "../src/pages/don-hang-cua-ban.html",
@@ -26,6 +27,7 @@ app.config(function ($routeProvider, $locationProvider) {
     })
     .when("/don-hang", {
       templateUrl: "../src/pages/don-hang.html",
+      controller: DonHangController
     })
     .when("/detail-sanpham/:id", {
       templateUrl: "../src/pages/detail-sanpham.html",
@@ -43,7 +45,11 @@ app.config(function ($routeProvider, $locationProvider) {
       templateUrl: "../src/pages/thong-tin-ca-nhan.html",
       controller: ThongTinCaNhanController,
     })
-    .when("/chi-tiet-don-hang/:id", {
+    .when("/chi-tiet-don-hang-cua-ban/:id", {
+      templateUrl: "../src/pages/chi-tiet-don-hang-cua-ban.html",
+      controller: ChiTietDonHangCuaBanController,
+    })
+    .when("/chi-tiet-hoa-don/:id", {
       templateUrl: "../src/pages/chi-tiet-don-hang.html",
       controller: ChiTietDonHangController,
     })

@@ -129,6 +129,10 @@ window.MuaHangController = function (
         });
 
       $localStorage.gioHangThanhToan = [];
+
+      alert(
+        "Bạn đã đặt hàng thành công vui lòng đợi shop xác nhận đơn hàng !!!"
+      );
     }
   };
 };

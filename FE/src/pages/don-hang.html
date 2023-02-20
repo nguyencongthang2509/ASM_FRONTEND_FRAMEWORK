@@ -1,1 +1,154 @@
-<h1>Đơn hàng</h1>
+<div class="container">
+  <h2 style="text-align: center">Đơn hàng</h2>
+  <div class="row">
+    <div class="link-product">
+      <ul class="nav justify-content-center">
+        <li class="nav-item">
+          <a
+            class="nav-link active"
+            value="0"
+            ng-class="{ 'active': activeLink === 0 }"
+            ng-model="trangThai"
+            aria-current="page"
+            href=""
+            ng-click="actionClick(0)"
+            >Chờ xác nhận
+            <span class="position-relative">
+              <img
+                src="../../server/src/main/resources/static/image/waiting.png"
+                alt=""
+              />
+              <span
+                ng-if="showLogout"
+                style="background-color: rgb(255, 0, 0)"
+                class="position-absolute top-0 start-100 translate-middle badge rounded-pill"
+              >
+                <span>{{soLuongDonHangChoXacNhan}}</span>
+                <span class="visually-hidden">unread messages</span>
+              </span>
+            </span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a
+            class="nav-link"
+            value="1"
+            ng-click="actionClick(1)"
+            ng-class="{ 'active': activeLink === 1 }"
+            ng-model="trangThai"
+            href=""
+            >Chờ lấy hàng
+            <span class="position-relative">
+              <img
+                src="../../server/src/main/resources/static/image/time-left.png"
+                alt=""
+              />
+              <span
+                ng-if="showLogout"
+                style="background-color: rgb(255, 0, 0)"
+                class="position-absolute top-0 start-100 translate-middle badge rounded-pill"
+              >
+                <span>{{soLuongDonHangChoLayHang}}</span>
+                <span class="visually-hidden">unread messages</span>
+              </span>
+            </span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a
+            class="nav-link"
+            ng-click="actionClick(2)"
+            ng-class="{ 'active': activeLink === 2 }"
+            value="2"
+            ng-model="trangThai"
+            href=""
+            >Đang giao
+            <span class="position-relative">
+              <img
+                src="../../server/src/main/resources/static/image/delivered.png"
+                alt=""
+              />
+              <span
+                ng-if="showLogout"
+                style="background-color: rgb(255, 0, 0)"
+                class="position-absolute top-0 start-100 translate-middle badge rounded-pill"
+              >
+                <span>{{soLuongDonHangDangGiao}}</span>
+                <span class="visually-hidden">unread messages</span>
+              </span>
+            </span></a
+          >
+        </li>
+        <li class="nav-item">
+          <a
+            class="nav-link"
+            ng-click="actionClick(3)"
+            ng-class="{ 'active': activeLink === 3 }"
+            value="3"
+            ng-model="trangThai"
+            href=""
+            >Đã giao
+            <img
+              src="../../../server/src/main/resources/static/image/delivered (1).png"
+              alt=""
+          /></a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <hr />
+  <div class="row">
+    <div class="col-2"><h5>Mã hóa đơn</h5></div>
+    <div class="col-2"><h5>Khách hàng</h5></div>
+    <div class="col-2"><h5>Ngày đặt hàng</h5></div>
+    <div class="col-2"><h5>Thành tiền</h5></div>
+    <div class="col-2"><h5>Trạng thái</h5></div>
+    <div class="col-2"><h5>Hành động</h5></div>
+  </div>
+  <hr />
+  <div
+    ng-repeat="item in listOrders | filter: { trangThai: trangThai } | orderBy:'-ngayTao'"
+    class="row"
+  >
+    <div class="col-2"><h6>{{item.maHD}}</h6></div>
+    <div class="col-2"><h6>{{findUserById(item.userId).hoTen}}</h6></div>
+    <div class="col-2">
+      <h6>{{item.ngayTao | date:'dd/MM/yyyy HH:mm:ss'}}</h6>
+    </div>
+    <div class="col-2">
+      <h6>{{item.thanhTien.toLocaleString('vi-VN')}} Vnđ</h6>
+    </div>
+    <div class="col-2">
+      <h6>
+        {{item.trangThai == 0 ? 'Chờ xác nhận' : (item.trangThai == 1 ? 'Chờ lấy
+        hàng' : (item.trangThai == 2 ? 'Đang giao' : 'Đã giao'))}}
+      </h6>
+    </div>
+    <div class="col-2">
+      <h6>
+        <a href="#/chi-tiet-don-hang/{{item.id}}"
+          ><div
+            data-toggle="tooltip"
+            title="Xem chi tiết"
+            class="eye-custom-don-hang"
+          >
+            <img
+              src="../../server/src/main/resources/static/image/eye-fill.svg"
+              alt=""
+            /></div> </a
+        ><a href="#/chi-tiet-don-hang/{{item.id}}"
+          ><div
+            data-toggle="tooltip"
+            title="Chuẩn bị hàng"
+            class="chuan-bi-hang"
+          >
+            <img
+              src="../../server/src/main/resources/static/image/terminal-fill.svg"
+              alt=""
+            /></div
+        ></a>
+      </h6>
+    </div>
+    <hr />
+  </div>
+</div>

@@ -52,7 +52,7 @@
 
 .nav-link {
   color: black;
-  font-size: 18px;
+  font-size: 16px;
 }
 
 .nav-item {
@@ -96,7 +96,9 @@ table {
   border-collapse: collapse;
 }
 
-table, th, td {
+table,
+th,
+td {
   border: 1px solid #ddd;
 }
 
@@ -155,8 +157,20 @@ marquee {
 
 .row.radio {
   margin-top: 10px;
-  font-size: 20px;
+  font-size: 16px;
   font-weight: 500;
+}
+
+.chuan-bi-hang {
+  border: solid 1px;
+  border-radius: 7px;
+  border: none;
+  background-color: rgb(237, 57, 41);
+  width: 30px;
+  height: 30px;
+  float: left;
+  text-align: center;
+  margin-left: 10px;
 }
 
 .eye-custom {
@@ -170,7 +184,7 @@ marquee {
   text-align: center;
 }
 
-.eye-custom.order{
+.eye-custom.order {
   border: solid 1px;
   border-radius: 7px;
   border: none;
@@ -181,7 +195,7 @@ marquee {
   float: left;
   text-align: center;
 }
-.eye-custom.muahang{
+.eye-custom.muahang {
   border: solid 1px;
   border-radius: 7px;
   border: none;
@@ -222,7 +236,7 @@ marquee {
   float: right;
 }
 
-.pencil-custom.order{
+.pencil-custom.order {
   float: left;
   border: solid 1px;
   border-radius: 7px;
@@ -240,12 +254,12 @@ marquee {
   border: #ddd;
 }
 
-.header-login a img{
+.header-login a img {
   max-height: 40px;
 }
 
 .nav-link {
-  color: rgb(186, 63, 63);
+  color: rgb(11, 96, 118);
 }
 
 .eye-custom-don-hang {
@@ -265,3 +279,29 @@ marquee {
   font-weight: 700;
 }
 
+.nav-item :hover {
+  color: rgb(255, 107, 1);
+  border-bottom: 3px solid rgb(255, 107, 1);
+  border-bottom-left-radius: 50%;
+}
+
+.nav-link.active {
+  color: rgb(255, 107, 1);
+  border-bottom: 3px solid rgb(255, 107, 1);
+  border-bottom-left-radius: 50%;
+}
+
+.link-product ul li a {
+  font-size: 16px;
+}
+
+#searchInput {
+  width: 67%;
+  border-radius: 20px;
+  border: #0a4851 1px solid;
+  float: right;
+}
+
+.col-lg-4.custom {
+  color: #1892b7;
+}

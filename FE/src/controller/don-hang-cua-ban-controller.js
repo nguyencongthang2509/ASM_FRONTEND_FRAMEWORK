@@ -32,7 +32,10 @@ window.DonHangCuaBanController = function (
     $scope.soLuongDonHangDangGiao = soLuongDonHangDangGiao;
   });
 
+  $scope.activeLink = 0;
+
   $scope.actionClick = function (trangThai) {
     $scope.trangThai = trangThai;
+    $scope.activeLink = trangThai;
   };
 };
