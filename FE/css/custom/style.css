@@ -245,7 +245,7 @@ marquee {
 }
 
 .nav-link {
-  color: rgb(60, 102, 139);
+  color: rgb(186, 63, 63);
 }
 
 .eye-custom-don-hang {
@@ -259,5 +259,9 @@ marquee {
   float: left;
   text-align: center;
   margin-bottom: 10px;
+}
+
+.header_menu {
+  font-weight: 700;
 }
 

@@ -4,15 +4,11 @@ window.SanPhamController = function (
   $rootScope,
   ProductService,
   CategoryService,
-  $localStorage,
   ProductAdd,
-  ProductUpdate
+  ProductUpdate,
+  AuthorizationService
 ) {
-  if ($localStorage.vaiTro) {
-    $rootScope.checkAuthors = true;
-  } else {
-    $rootScope.checkAuthors = false;
-  }
+  $rootScope.checkAuthors = !AuthorizationService.checkAuthors();
 
   CategoryService.fetchCategories().then(function () {
     $scope.listCategory = CategoryService.getCategory();

@@ -5,17 +5,13 @@ window.MuaHangController = function (
   ProductService,
   OrderService,
   OrderAdd,
-  $location,
   UserService,
   UserUpdate,
   OrderDetailAdd,
-  ProductUpdate
+  ProductUpdate,
+  AuthorizationService
 ) {
-  if ($localStorage.vaiTro) {
-    $rootScope.checkAuthors = false;
-  } else {
-    $rootScope.checkAuthors = true;
-  }
+  $rootScope.checkAuthors = AuthorizationService.checkAuthors();
 
   $scope.listGioHangMuaHang = $localStorage.gioHangThanhToan;
 
@@ -56,9 +52,9 @@ window.MuaHangController = function (
   $scope.datHang = function () {
     let check = confirm("Bạn có chắc chắn muốn đặt hàng không?");
     if (check) {
-      let id = Number($scope.listOrders.length) + 1;
+      let idOrder = Number($scope.listOrders.length) + 1;
       let orderAddPromise = OrderAdd.create({
-        id: id,
+        id: idOrder,
         maHD: "HD" + new Date().getTime(),
         ngayTao: new Date().getTime(),
         userId: $localStorage.id,
@@ -71,8 +67,10 @@ window.MuaHangController = function (
         let product = $scope.findProductById(id);
         return OrderDetailAdd.create({
           productId: id,
-          orderId: id,
+          orderId: idOrder,
           soLuong: soLuong,
+          tenSP: product.tenSP,
+          image: product.image,
           donGia: product.donGia,
         }).$promise;
       });
@@ -118,9 +116,9 @@ window.MuaHangController = function (
 
       Promise.all([
         orderAddPromise,
-        ...orderDetailsPromises,// mảng API
+        ...orderDetailsPromises, // mảng API
         userUpdatePromise,
-        ...productUpdatePromises,// mảng API
+        ...productUpdatePromises, // mảng API
       ])
         .then((results) => {
           // alert("Tất cả các promise đã hoàn thành!");

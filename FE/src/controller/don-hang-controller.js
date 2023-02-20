@@ -1,7 +1,3 @@
-window.DonHangController = function($rootScope, $localStorage){
-    if ($localStorage.vaiTro) {
-        $rootScope.checkAuthors = true;
-      } else {
-        $rootScope.checkAuthors = false;
-      }
+window.DonHangController = function($rootScope, AuthorizationService){
+  $rootScope.checkAuthors = !AuthorizationService.checkAuthors();
 }

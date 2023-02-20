@@ -1,27 +1,21 @@
 app.service("UserService", function ($http) {
-  var users = {};
+  var user = {};
 
   this.getUser = function () {
-    return users;
+    return user;
   };
 
   this.setUser = function (data) {
-    users = data;
+    user = data;
   };
 
   this.fetchUser = function (idUser) {
-    return $http.get(userAPI).then(
+    return $http.get(userAPI + "/" + idUser).then(
       function (response) {
-        var listUsers = [];
         if (response.status === 200) {
-          listUsers = response.data;
+          user = response.data;
         }
-        for (var item of listUsers) {
-          if (item.id == idUser) {
-            users = item;
-            return response;
-          }
-        }
+        return user;
       },
       function (errors) {
         console.log(errors);

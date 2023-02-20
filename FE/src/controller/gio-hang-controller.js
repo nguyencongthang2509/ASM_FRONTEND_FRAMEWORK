@@ -5,13 +5,10 @@ window.GioHangController = function (
   $location,
   ProductService,
   UserService,
-  UserUpdate
+  UserUpdate,
+  AuthorizationService
 ) {
-  if ($localStorage.vaiTro) {
-    $rootScope.checkAuthors = false;
-  } else {
-    $rootScope.checkAuthors = true;
-  }
+  $rootScope.checkAuthors = AuthorizationService.checkAuthors();
 
   ProductService.fetchProducts().then(function () {
     $scope.list = ProductService.getProducts();

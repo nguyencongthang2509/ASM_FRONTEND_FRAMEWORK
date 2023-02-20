@@ -36,18 +36,39 @@ app.service("OrderServiceByUser", function ($http) {
   };
 
   this.fetchOrders = function (idUser) {
-    return $http.get(orderAPI).then(
+    return $http.get(orderAPI + "?userId=" + idUser).then(
       function (response) {
-        var listOrders = [];
+        orders = [];
         if (response.status === 200) {
-          listOrders = response.data;
-        }
-        for (var item of listOrders) {
-          if (item.userId == idUser) {
-            orders.push(item);
-          }
+          orders = response.data;
         }
         return orders;
+      },
+      function (errors) {
+        console.log(errors);
+      }
+    );
+  };
+});
+
+app.service("OrderServiceById", function ($http) {
+  var order = {};
+
+  this.getOrder = function () {
+    return order;
+  };
+
+  this.setOrder = function (data) {
+    order = data;
+  };
+
+  this.fetchOrder = function (orderId) {
+    return $http.get(orderAPI + "/" + orderId + "?_embed=orderDetails").then(
+      function (response) {
+        if (response.status === 200) {
+          order = response.data;
+        }
+        return order;
       },
       function (errors) {
         console.log(errors);

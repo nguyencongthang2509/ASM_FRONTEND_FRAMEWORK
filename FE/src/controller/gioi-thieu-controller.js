@@ -1,7 +1,3 @@
-window.GioiThieuController = function ($rootScope, $localStorage) {
-  if ($localStorage.vaiTro) {
-    $rootScope.checkAuthors = false;
-  } else {
-    $rootScope.checkAuthors = true;
-  }
+window.GioiThieuController = function ($rootScope, AuthorizationService) {
+  $rootScope.checkAuthors = AuthorizationService.checkAuthors();
 };

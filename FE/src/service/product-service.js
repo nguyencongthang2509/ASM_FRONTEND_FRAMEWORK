@@ -36,7 +36,7 @@ app.service("getOneProductService", function ($http) {
   };
 
   this.fetchProduct = function (idSP) {
-    return $http.get(productsAPI + "?_expand=category").then(
+    return $http.get(productsAPI + "/" + idSP + "?_expand=category").then(
       function (response) {
         var listProducts = [];
         if (response.status === 200) {

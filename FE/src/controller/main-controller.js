@@ -1,6 +1,6 @@
 app.controller(
   "myCtrl",
-  function ($scope, $localStorage, UserService, UsersService) {
+  function ($scope, $localStorage, UserService, UsersService, OrderServiceByUser) {
     let userCurrent = {};
 
     $localStorage.checkAuthors = true;
@@ -48,6 +48,17 @@ app.controller(
           $scope.listGioHang = item.gioHang;
         }
       }
+    });
+
+    OrderServiceByUser.fetchOrders($localStorage.id).then(function () {
+      let listOrders = OrderServiceByUser.getOrders();
+      let count = 0;
+      for(let item of listOrders){
+        if(item.trangThai != 3){
+          count ++;
+        }
+      }
+      $scope.soLuongDonHang = count; 
     });
   }
 );

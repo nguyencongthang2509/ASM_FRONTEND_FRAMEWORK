@@ -3,14 +3,10 @@ window.DetailSanphamController = function (
   $rootScope,
   $routeParams,
   ProductService,
-  $localStorage,
+  AuthorizationService
 ) {
 
-  if ($localStorage.vaiTro) {
-    $rootScope.checkAuthors = true;
-  } else {
-    $rootScope.checkAuthors = false;
-  }
+  $rootScope.checkAuthors = AuthorizationService.checkAuthors();
 
   ProductService.fetchProducts().then(function () {
     $scope.product = ProductService.getProducts().filter((product) => {

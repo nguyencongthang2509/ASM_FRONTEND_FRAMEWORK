@@ -4,13 +4,16 @@ window.TrangChuController = function (
   $rootScope,
   ProductService,
   UserService,
+  $filter,
   UserUpdate
 ) {
-
+  
   $rootScope.checkAuthors = true;
 
   ProductService.fetchProducts().then(function () {
     $scope.listProduct = ProductService.getProducts();
+    $scope.filteredData = $filter("orderBy")($scope.listProduct, "-ngayTao");
+    $scope.filteredData = $scope.filteredData.slice(0, 8);
   });
 
   $scope.findProductById = function (id) {
@@ -81,5 +84,15 @@ window.TrangChuController = function (
       },
       function (error) {}
     );
+  };
+
+  $scope.sanPhamMoi = function () {
+    $scope.filteredData = $filter("orderBy")($scope.listProduct, "-ngayTao");
+    $scope.filteredData = $scope.filteredData.slice(0, 8);
+  };
+
+  $scope.banChay = function () {
+    $scope.filteredData = $filter("orderBy")($scope.listProduct, "-soLuongBan");
+    $scope.filteredData = $scope.filteredData.slice(0, 8);
   };
 };

@@ -2,35 +2,74 @@
   "orders": [
     {
       "id": 1,
-      "maHD": "HD1676839288535",
-      "ngayTao": 1676839288536,
+      "maHD": "HD1676875067921",
+      "ngayTao": 1676875067921,
       "userId": 1,
       "thanhTien": 300000,
       "trangThai": 0
     },
     {
       "id": 2,
-      "maHD": "HD1676840123958",
-      "ngayTao": 1676840123958,
+      "maHD": "HD1676875340522",
+      "ngayTao": 1676875340522,
       "userId": 1,
-      "thanhTien": 600000,
+      "thanhTien": 610000,
+      "trangThai": 0
+    },
+    {
+      "id": 3,
+      "maHD": "HD1676875448049",
+      "ngayTao": 1676875448049,
+      "userId": 1,
+      "thanhTien": 10000,
       "trangThai": 0
     }
   ],
   "orderDetails": [
     {
-      "productId": 1,
+      "productId": 5,
       "orderId": 1,
       "soLuong": 1,
+      "tenSP": "Predoctor A12",
+      "image": "SP005.jpg",
       "donGia": 300000,
       "id": 1
     },
     {
-      "productId": 1,
-      "orderId": 1,
-      "soLuong": 2,
+      "productId": 5,
+      "orderId": 2,
+      "soLuong": 1,
+      "tenSP": "Predoctor A12",
+      "image": "SP005.jpg",
       "donGia": 300000,
       "id": 2
+    },
+    {
+      "productId": 17,
+      "orderId": 2,
+      "soLuong": 1,
+      "tenSP": "Dr Thanh",
+      "image": "385835b16745045e23dac14a1e456ef6.jpg",
+      "donGia": 10000,
+      "id": 3
+    },
+    {
+      "productId": 16,
+      "orderId": 2,
+      "soLuong": 1,
+      "tenSP": "Kaito TA11 TF KID",
+      "image": "SP016.jpg",
+      "donGia": 300000,
+      "id": 4
+    },
+    {
+      "productId": 17,
+      "orderId": 3,
+      "soLuong": 1,
+      "tenSP": "Dr Thanh",
+      "image": "385835b16745045e23dac14a1e456ef6.jpg",
+      "donGia": 10000,
+      "id": 5
     }
   ],
   "users": [
@@ -66,23 +105,14 @@
       "ma": "KH003",
       "hoTen": "Nguyễn Văn B",
       "ngaySinh": "25-09-2003",
-      "image": "thang2.jpg",
       "gioiTinh": false,
-      "diaChi": "Số nhà 7, ngách 47, ngõ 80 đường Xuân Phương, Phương Canh, Nam Từ Liêm, Hà Nội",
       "sdt": "0971089763",
+      "image": "thang2.jpg",
+      "diaChi": "Số nhà 7, ngách 47, ngõ 80 đường Xuân Phương, Phương Canh, Nam Từ Liêm, Hà Nội",
       "email": "bnv@gmail.com",
       "matKhau": "123456",
       "vaiTro": false,
-      "gioHang": [
-        {
-          "id": 1,
-          "soLuong": 4
-        },
-        {
-          "id": 2,
-          "soLuong": 1
-        }
-      ],
+      "gioHang": [],
       "id": 3
     },
     {
@@ -187,10 +217,10 @@
       "maSP": "SP001",
       "tenSP": "Aventador",
       "donGia": 300000,
-      "soLuong": 547,
+      "soLuong": 543,
       "moTa": "Thân giày đá bóng  được làm từ da PU cao cấp, bề mặt bóng chống bám bẩn, chống thấm nước dễ dàng sử dụng trong thời tiết ẩm ướt không lo tuổi thọ của giày. Bên cạnh đó, lớp da của phần upper được tráng một lớp firm mỏng giúp bảo vệ phần da giày tốt hơn.",
       "ngayTao": 1645380350000,
-      "soLuongBan": 153,
+      "soLuongBan": 157,
       "image": "SP001.jpg",
       "categoryId": 1,
       "id": 1,
@@ -204,13 +234,18 @@
       "maSP": "SP002",
       "tenSP": "Kaito TA11",
       "donGia": 300000,
-      "soLuong": 450,
+      "soLuong": 449,
       "moTa": "Thân giày đá bóng  được làm từ da PU cao cấp, bề mặt bóng chống bám bẩn, chống thấm nước dễ dàng sử dụng trong thời tiết ẩm ướt không lo tuổi thọ của giày. Bên cạnh đó, lớp da của phần upper được tráng một lớp firm mỏng giúp bảo vệ phần da giày tốt hơn.",
       "ngayTao": 1645380350010,
-      "soLuongBan": 150,
+      "soLuongBan": 151,
       "image": "SP002.jpg",
       "categoryId": 3,
-      "id": 2
+      "id": 2,
+      "category": {
+        "id": 3,
+        "ma": "TL003",
+        "ten": "Vans A12"
+      }
     },
     {
       "maSP": "SP003",
@@ -243,9 +278,9 @@
       "ngayTao": 16453803507040,
       "donGia": 300000,
       "moTa": "Thân giày đá bóng  được làm từ da PU cao cấp, bề mặt bóng chống bám bẩn, chống thấm nước dễ dàng sử dụng trong thời tiết ẩm ướt không lo tuổi thọ của giày. Bên cạnh đó, lớp da của phần upper được tráng một lớp firm mỏng giúp bảo vệ phần da giày tốt hơn.",
-      "soLuong": 250,
+      "soLuong": 246,
       "image": "SP005.jpg",
-      "soLuongBan": 50,
+      "soLuongBan": 54,
       "categoryId": 1,
       "category": {
         "id": 1,
@@ -292,10 +327,10 @@
       "maSP": "SP008",
       "ngayTao": 1645380350070,
       "tenSP": "Yamy Avenue",
-      "soLuongBan": 50,
+      "soLuongBan": 51,
       "donGia": 300000,
       "moTa": "Thân giày đá bóng  được làm từ da PU cao cấp, bề mặt bóng chống bám bẩn, chống thấm nước dễ dàng sử dụng trong thời tiết ẩm ướt không lo tuổi thọ của giày. Bên cạnh đó, lớp da của phần upper được tráng một lớp firm mỏng giúp bảo vệ phần da giày tốt hơn.",
-      "soLuong": 250,
+      "soLuong": 249,
       "image": "SP008.jpg",
       "categoryId": 3,
       "category": {
@@ -390,27 +425,37 @@
     },
     {
       "id": 16,
-      "soLuongBan": 0,
+      "soLuongBan": 1,
       "ngayTao": 1645380350160,
       "maSP": "SP016",
       "moTa": "Thân giày đá bóng  được làm từ da PU cao cấp, bề mặt bóng chống bám bẩn, chống thấm nước dễ dàng sử dụng trong thời tiết ẩm ướt không lo tuổi thọ của giày. Bên cạnh đó, lớp da của phần upper được tráng một lớp firm mỏng giúp bảo vệ phần da giày tốt hơn.",
       "tenSP": "Kaito TA11 TF KID",
       "donGia": 300000,
-      "soLuong": 300,
+      "soLuong": 299,
       "image": "SP016.jpg",
-      "categoryId": 1
+      "categoryId": 1,
+      "category": {
+        "id": 1,
+        "ma": "TL001",
+        "ten": "Nike AFF"
+      }
     },
     {
       "maSP": "SP17",
       "tenSP": "Dr Thanh",
       "donGia": 10000,
-      "soLuong": 50,
+      "soLuong": 48,
       "moTa": "Thân giày đá bóng  được làm từ da PU cao cấp, bề mặt bóng chống bám bẩn, chống thấm nước dễ dàng sử dụng trong thời tiết ẩm ướt không lo tuổi thọ của giày. Bên cạnh đó, lớp da của phần upper được tráng một lớp firm mỏng giúp bảo vệ phần da giày tốt hơn.",
       "ngayTao": 1645380350170,
-      "soLuongBan": 7,
+      "soLuongBan": 9,
       "image": "385835b16745045e23dac14a1e456ef6.jpg",
       "categoryId": 1,
-      "id": 17
+      "id": 17,
+      "category": {
+        "id": 1,
+        "ma": "TL001",
+        "ten": "Nike AFF"
+      }
     }
   ],
   "categories": [
