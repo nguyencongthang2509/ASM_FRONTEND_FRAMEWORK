@@ -76,3 +76,29 @@ app.service("OrderServiceById", function ($http) {
     );
   };
 });
+
+app.service("OrderServiceByOrderId", function ($http) {
+  var order = {};
+
+  this.getOrder = function () {
+    return order;
+  };
+
+  this.setOrder = function (data) {
+    order = data;
+  };
+
+  this.fetchOrder = function (orderId) {
+    return $http.get(orderAPI + "/" + orderId).then(
+      function (response) {
+        if (response.status === 200) {
+          order = response.data;
+        }
+        return order;
+      },
+      function (errors) {
+        console.log(errors);
+      }
+    );
+  };
+});

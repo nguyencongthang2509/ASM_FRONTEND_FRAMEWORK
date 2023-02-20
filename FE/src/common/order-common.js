@@ -9,3 +9,15 @@ app.factory("OrderAdd", function ($resource) {
     }
   );
 });
+
+app.factory("OrderUpdate", function ($resource) {
+  return $resource(
+    orderAPI + "/:id",
+    { id: "@_id" },
+    {
+      update: {
+        method: "PUT",
+      },
+    }
+  );
+});

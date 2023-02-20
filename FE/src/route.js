@@ -49,7 +49,7 @@ app.config(function ($routeProvider, $locationProvider) {
       templateUrl: "../src/pages/chi-tiet-don-hang-cua-ban.html",
       controller: ChiTietDonHangCuaBanController,
     })
-    .when("/chi-tiet-hoa-don/:id", {
+    .when("/chi-tiet-don-hang/:id", {
       templateUrl: "../src/pages/chi-tiet-don-hang.html",
       controller: ChiTietDonHangController,
     })

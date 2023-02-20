@@ -3,11 +3,14 @@ window.DonHangController = function (
   $rootScope,
   AuthorizationService,
   OrderService,
-  UsersService
+  OrderServiceByOrderId,
+  UsersService,
+  OrderUpdate
 ) {
   $rootScope.checkAuthors = !AuthorizationService.checkAuthors();
 
   $scope.activeLink = 0;
+  $scope.trangThai = 0;
 
   $scope.actionClick = function (trangThai) {
     $scope.trangThai = trangThai;
@@ -45,4 +48,33 @@ window.DonHangController = function (
     $scope.soLuongDonHangChoLayHang = soLuongDonHangChoLayHang;
     $scope.soLuongDonHangDangGiao = soLuongDonHangDangGiao;
   });
+
+  $scope.chuanBiHang = function (id) {
+    let check = confirm(
+      "Bạn có chắc muốn cập nhật trạng thái hóa đơn không?"
+    );
+    if (check) {
+      OrderServiceByOrderId.fetchOrder(id).then(function () {
+        $scope.orderFindById = OrderServiceByOrderId.getOrder();
+
+        if ($scope.trangThai == 0) {
+          $scope.orderFindById.trangThai = 1;
+        }else if($scope.trangThai == 1){
+          $scope.orderFindById.trangThai = 2;
+        }else if($scope.trangThai == 2){
+          $scope.orderFindById.trangThai = 3;
+        }
+
+        OrderUpdate.update({ id: id }, $scope.orderFindById).$promise.then(
+          function (response) {
+            alert("Cập nhật thành công");
+            $location.path("/don-hang");
+          },
+          function (errors) {
+            console.log(errors);
+          }
+        );
+      });
+    }
+  };
 };

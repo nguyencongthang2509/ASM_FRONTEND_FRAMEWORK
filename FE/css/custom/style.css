@@ -262,6 +262,19 @@ marquee {
   color: rgb(11, 96, 118);
 }
 
+.chuan-bi-hang {
+  border: solid 1px;
+  border-radius: 7px;
+  border: none;
+  background-color: rgb(239, 82, 58);
+  width: 30px;
+  height: 30px;
+  line-height: 25px;
+  float: left;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
 .eye-custom-don-hang {
   border: solid 1px;
   border-radius: 7px;
@@ -283,6 +296,7 @@ marquee {
   color: rgb(255, 107, 1);
   border-bottom: 3px solid rgb(255, 107, 1);
   border-bottom-left-radius: 50%;
+  transition: 1s;
 }
 
 .nav-link.active {
